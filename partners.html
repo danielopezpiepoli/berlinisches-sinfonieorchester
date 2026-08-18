@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners & Sponsors | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger active-nav">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" class="active-subnav" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: PARTNERS & SPONSORS
+         ========================================= -->
+    <main class="partners-page">
+
+        <!-- 1. HERO EDITORIAL -->
+        <section class="partners-hero">
+            <span class="section-tag">Alliances & Sustaining Network</span>
+            <h1 class="page-title">Partners & Sponsors</h1>
+            <div class="short-line"></div>
+            <p class="partners-intro">
+                We extend our profound gratitude to the foundations, corporate sponsors, public institutions, and cultural partners whose ongoing and historic backing makes our symphonic seasons possible.
+            </p>
+        </section>
+
+        <!-- 2. SECCIÓN: INSTITUTIONAL & CULTURAL PARTNERS -->
+        <section class="partners-block">
+            <div class="partners-block-header">
+                <span class="block-tag">Public & Cultural Sector</span>
+                <h2 class="block-title">Institutional & Venue Partners</h2>
+                <div class="block-line"></div>
+            </div>
+
+            <div class="partners-wall-grid">
+                <div class="partner-logo-item">
+                    <img src="images/partners/konzerthaus-berlin.png" alt="Konzerthaus Berlin" onerror="this.src='https://via.placeholder.com/200x80?text=Konzerthaus+Berlin'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/berliner-philharmonie.png" alt="Berliner Philharmonie" onerror="this.src='https://via.placeholder.com/200x80?text=Berliner+Philharmonie'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/admiralspalast.png" alt="Admiralspalast Berlin" onerror="this.src='https://via.placeholder.com/200x80?text=Admiralspalast'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/senat-berlin.png" alt="Senatsverwaltung für Kultur Berlin" onerror="this.src='https://via.placeholder.com/200x80?text=Kultur+Berlin'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/goethe-institut.png" alt="Goethe Institut" onerror="this.src='https://via.placeholder.com/200x80?text=Goethe+Institut'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/deutscher-musikrat.png" alt="Deutscher Musikrat" onerror="this.src='https://via.placeholder.com/200x80?text=Deutscher+Musikrat'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN: CORPORATE SPONSORS & FOUNDATIONS -->
+        <section class="partners-block">
+            <div class="partners-block-header">
+                <span class="block-tag">Private Sector & Philanthropy</span>
+                <h2 class="block-title">Corporate Sponsors & Foundations</h2>
+                <div class="block-line"></div>
+            </div>
+
+            <div class="partners-wall-grid">
+                <div class="partner-logo-item">
+                    <img src="images/partners/deutsche-bank-stiftung.png" alt="Cultural Foundation" onerror="this.src='https://via.placeholder.com/200x80?text=Cultural+Foundation'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/bayer-kultur.png" alt="Corporate Patron" onerror="this.src='https://via.placeholder.com/200x80?text=Corporate+Patron'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/sparkasse-berlin.png" alt="Berliner Sparkasse" onerror="this.src='https://via.placeholder.com/200x80?text=Sparkasse+Berlin'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/audi-art.png" alt="Art Experience Partner" onerror="this.src='https://via.placeholder.com/200x80?text=Arts+Program'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/siemens-arts.png" alt="Siemens Arts Program" onerror="this.src='https://via.placeholder.com/200x80?text=Siemens+Arts'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/kuehne-foundation.png" alt="Kühne Foundation" onerror="this.src='https://via.placeholder.com/200x80?text=Kuehne+Foundation'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN: MEDIA & COMMUNITY SUPPORTERS -->
+        <section class="partners-block">
+            <div class="partners-block-header">
+                <span class="block-tag">Media & Outreach</span>
+                <h2 class="block-title">Media & Community Allies</h2>
+                <div class="block-line"></div>
+            </div>
+
+            <div class="partners-wall-grid">
+                <div class="partner-logo-item">
+                    <img src="images/partners/rbb-kultur.png" alt="rbb Kultur Radio" onerror="this.src='https://via.placeholder.com/200x80?text=rbb+Kultur'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/deutschlandfunk-kultur.png" alt="Deutschlandfunk Kultur" onerror="this.src='https://via.placeholder.com/200x80?text=DLF+Kultur'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/berliner-zeitung.png" alt="Berliner Zeitung" onerror="this.src='https://via.placeholder.com/200x80?text=Berliner+Zeitung'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/tip-berlin.png" alt="tip Berlin Magazine" onerror="this.src='https://via.placeholder.com/200x80?text=tip+Berlin'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/tagesspiegel.png" alt="Der Tagesspiegel" onerror="this.src='https://via.placeholder.com/200x80?text=Tagesspiegel'">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/partners/eventim.png" alt="Eventim DE" onerror="this.src='https://via.placeholder.com/200x80?text=Eventim'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BANNER DE LLAMADA A LA ACCIÓN (ALIANZAS NUEVAS) -->
+        <section class="partners-cta-banner">
+            <div class="cta-content">
+                <span class="cta-tag">Corporate Partnership</span>
+                <h3>Associate Your Brand with Symphonic Excellence</h3>
+                <p>Align your organization with high-caliber artistic achievement and community transformation in Berlin. We offer tailored sponsorship packages, VIP hospitality, and international branding.</p>
+                <div class="cta-buttons-row">
+                    <a href="support-vision.html" class="btn-tier btn-tier-featured">Explore Partnership Options &rarr;</a>
+                    <a href="contact.html?topic=partners" class="btn-tier">Contact Executive Office</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

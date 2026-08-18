@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season 2026 Program | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: CALENDARIO & PROGRAMA COMPLETO
+         ========================================= -->
+    <main class="program-page">
+
+        <!-- 1. HERO EDITORIAL -->
+        <section class="program-hero">
+            <span class="section-tag">Concert Season</span>
+            <h1 class="page-title">Season 2026</h1>
+            <div class="short-line"></div>
+            <p class="program-intro">
+                Explore our upcoming symphonic programs across Berlin's iconic concert halls. From monumental classical masterworks to cinematic gala evenings.
+            </p>
+        </section>
+
+        <!-- 2. FILTRO POR CATEGORÍA -->
+        <section class="program-filter-bar">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="symphonic">Symphonic Series</button>
+            <button class="filter-btn" data-filter="special">Special Galas</button>
+            <button class="filter-btn" data-filter="chamber">Chamber Sessions</button>
+        </section>
+
+        <!-- 3. LISTA DE CONCIERTOS (TIMELINE / FEED) -->
+        <section class="concerts-list-wrapper">
+
+            <!-- EVENTO 1 -->
+            <article class="concert-card" data-category="symphonic">
+                <div class="concert-date-badge">
+                    <span class="concert-month">OCT</span>
+                    <span class="concert-day">24</span>
+                    <span class="concert-year">2026</span>
+                </div>
+
+                <div class="concert-details">
+                    <div class="concert-meta">
+                        <span class="meta-tag">Symphonic Series</span>
+                        <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Konzerthaus Berlin | Großer Saal</span>
+                        <span class="meta-time"><i class="fa-regular fa-clock"></i> 20:00 CEST</span>
+                    </div>
+
+                    <h2 class="concert-title">Beethoven: Symphony No. 3 in E-flat Major "Eroica"</h2>
+                    
+                    <div class="concert-program-works">
+                        <p><strong>L. v. Beethoven:</strong> <em>Egmont Overture</em>, Op. 84</p>
+                        <p><strong>L. v. Beethoven:</strong> <em>Symphony No. 3 in E-flat Major</em>, Op. 55 "Eroica"</p>
+                    </div>
+
+                    <div class="concert-artists">
+                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
+                    </div>
+                </div>
+
+                <div class="concert-action-panel">
+                    <span class="ticket-status status-available">Tickets Available</span>
+                    <a href="https://www.eventim.de" target="_blank" rel="noopener noreferrer" class="btn-event btn-ticket">Get Tickets &rarr;</a>
+                </div>
+            </article>
+
+            <!-- EVENTO 2 -->
+            <article class="concert-card" data-category="symphonic">
+                <div class="concert-date-badge">
+                    <span class="concert-month">NOV</span>
+                    <span class="concert-day">15</span>
+                    <span class="concert-year">2026</span>
+                </div>
+
+                <div class="concert-details">
+                    <div class="concert-meta">
+                        <span class="meta-tag">Romantic Series</span>
+                        <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Berliner Philharmonie | Kammermusiksaal</span>
+                        <span class="meta-time"><i class="fa-regular fa-clock"></i> 19:30 CEST</span>
+                    </div>
+
+                    <h2 class="concert-title">Mendelssohn: "Scottish" Symphony No. 3</h2>
+                    
+                    <div class="concert-program-works">
+                        <p><strong>F. Mendelssohn:</strong> <em>The Hebrides (Fingal's Cave)</em>, Op. 26</p>
+                        <p><strong>F. Mendelssohn:</strong> <em>Symphony No. 3 in A minor</em>, Op. 56 "Scottish"</p>
+                    </div>
+
+                    <div class="concert-artists">
+                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span><strong>Soloist:</strong> Guest Violin Soloist (TBA)</span>
+                    </div>
+                </div>
+
+                <div class="concert-action-panel">
+                    <span class="ticket-status status-available">Tickets Available</span>
+                    <a href="https://www.eventim.de" target="_blank" rel="noopener noreferrer" class="btn-event btn-ticket">Get Tickets &rarr;</a>
+                </div>
+            </article>
+
+            <!-- EVENTO 3 -->
+            <article class="concert-card" data-category="special">
+                <div class="concert-date-badge">
+                    <span class="concert-month">DEC</span>
+                    <span class="concert-day">05</span>
+                    <span class="concert-year">2026</span>
+                </div>
+
+                <div class="concert-details">
+                    <div class="concert-meta">
+                        <span class="meta-tag">Special Gala</span>
+                        <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Admiralspalast Berlin</span>
+                        <span class="meta-time"><i class="fa-regular fa-clock"></i> 21:00 CEST</span>
+                    </div>
+
+                    <h2 class="concert-title">The Sound of Cinema: Hollywood in Berlin</h2>
+                    
+                    <div class="concert-program-works">
+                        <p><strong>Selected Scores by:</strong> John Williams, Hans Zimmer, Ennio Morricone & Bernard Herrmann</p>
+                    </div>
+
+                    <div class="concert-artists">
+                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
+                    </div>
+                </div>
+
+                <div class="concert-action-panel">
+                    <span class="ticket-status status-presale">Presale Opening Soon</span>
+                    <a href="contact.html?topic=general" class="btn-event btn-ticket-ghost">Inquire / Waitlist</a>
+                </div>
+            </article>
+
+            <!-- EVENTO 4 -->
+            <article class="concert-card" data-category="chamber">
+                <div class="concert-date-badge">
+                    <span class="concert-month">DEC</span>
+                    <span class="concert-day">18</span>
+                    <span class="concert-year">2026</span>
+                </div>
+
+                <div class="concert-details">
+                    <div class="concert-meta">
+                        <span class="meta-tag">Chamber Sessions</span>
+                        <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Bode-Museum | Basilika</span>
+                        <span class="meta-time"><i class="fa-regular fa-clock"></i> 18:00 CEST</span>
+                    </div>
+
+                    <h2 class="concert-title">Winter Baroque: Corelli, Vivaldi & Bach</h2>
+                    
+                    <div class="concert-program-works">
+                        <p><strong>A. Corelli:</strong> <em>Christmas Concerto</em>, Op. 6 No. 8</p>
+                        <p><strong>A. Vivaldi:</strong> <em>Concerto for Two Violins in A minor</em>, RV 522</p>
+                        <p><strong>J. S. Bach:</strong> <em>Brandenburg Concerto No. 3 in G major</em>, BWV 1048</p>
+                    </div>
+
+                    <div class="concert-artists">
+                        <span><strong>Ensemble:</strong> Soloists of Berlinisches Sinfonieorchester</span>
+                    </div>
+                </div>
+
+                <div class="concert-action-panel">
+                    <span class="ticket-status status-soldout">Sold Out</span>
+                    <button class="btn-event btn-disabled" disabled>Sold Out</button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- 4. BANNER DE PATROCINIO & MECENAZGO CRUZADO -->
+        <section class="program-patron-banner">
+            <div class="banner-content">
+                <span class="banner-tag">Exclusive Patron Access</span>
+                <h3>Attend Private Rehearsals & Secure Priority Seats</h3>
+                <p>Members of our Friends Circle and Patron's Circle receive early booking windows and invitations to dress rehearsals across Berlin.</p>
+                <a href="support-vision.html" class="btn-ghost">Support the Vision &rarr;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

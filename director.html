@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Director | Daniel López Piepoli | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger active-nav">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" class="active-subnav" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: MUSIC DIRECTOR BIOGRAPHY
+         ========================================= -->
+    <main class="director-page">
+
+        <!-- 1. HERO EDITORIAL -->
+        <section class="director-hero">
+            <span class="section-tag">Artistic Leadership</span>
+            <h1 class="page-title">Daniel López Piepoli</h1>
+            <div class="director-subtitle">Music Director & Founder</div>
+            <div class="short-line"></div>
+        </section>
+
+        <!-- 2. BIOGRAFÍA EDITORIAL CON 2 FOTOS (PORTRAIT & ACTION) -->
+        <section class="director-profile-section">
+            <div class="director-article-layout">
+                
+                <!-- BLOQUE 1: INTRO + FOTO VERTICAL (PORTRAIT) -->
+                <div class="director-intro-grid">
+                    <div class="director-portrait-wrap">
+                        <img src="assets/images/daniel-lopez-piepoli-portrait-conductor.jpg" alt="Daniel López Piepoli - Portrait" onerror="this.src='https://via.placeholder.com/600x750?text=Daniel+L%C3%B3pez+Portrait'">
+                        <div class="portrait-gold-frame"></div>
+                    </div>
+
+                    <div class="director-intro-text">
+                        <span class="intro-kicker">Biography</span>
+                        <h2>An Innate Communicator with Contagious Charisma</h2>
+                        <p class="lead-bio">
+                            <strong>Daniel López Piepoli</strong> (Venezuela, 1996) is an Italian-Venezuelan conductor currently based in Berlin, Germany. He trained as a Conductor in his native country, Venezuela, in <em>El Sistema</em>, the music education program initiated by maestro José Antonio Abreu. Besides his enthusiastic artistic vision and academic preparation, he has a natural affinity for languages (conversational in English, Spanish, Italian, Portuguese, and French).
+                        </p>
+                        <p>
+                            Daniel’s artistry is portrayed by remarkable vivacity, sensitivity, and enthusiasm, which led him to win the <strong>3rd Prize in the New York Classical Music Competition (USA)</strong>, to be <strong>semi-finalist in the 2nd Italian International Conducting Competition in Bordighera (Italy)</strong> and <strong>finalist in the International Artists Competition (Austria)</strong> in 2023, year in which he made his debut in Italy with the Youth Strings Orchestra “Note Libere” of Sanremo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BLOQUE 2: FOTO HORIZONTAL EN ACCIÓN DIRIGIENDO (ACTION SHOT) -->
+                <figure class="director-action-figure">
+                    <img src="assets/images/daniel-lopez-piepoli-conducting.JPG" alt="Daniel López Piepoli conducting Berlinisches Sinfonieorchester" onerror="this.src='https://via.placeholder.com/1200x550?text=Daniel+L%C3%B3pez+Conducting+Orchestra'">
+                    <!--<figcaption class="action-caption">
+                        <span>Daniel López Piepoli in rehearsal with the Berlinisches Sinfonieorchester</span>
+                    </figcaption>-->
+                </figure>
+
+                <!-- BLOQUE 3: TEXTO DE FORMACIÓN Y TRAYECTORIA -->
+                <div class="director-extended-bio">
+                    <div class="bio-columns-text">
+                        <p>
+                            In the same year, he participated in the 5th BMI International Conducting Competition with the Bucharest Symphony (Romania) and in the inaugural edition of the “Borislav Ivanov” International Competition for Young Conductors with the Varna State Opera (Bulgaria) as the only Latin American and representative of the American continent selected. Recently, in 2024, he was guest conductor of the <em>Anima Orchestre et Art Lyrique</em> in Paris (France).
+                        </p>
+                        <p>
+                            Daniel started studying Orchestral Conducting with Ramón Moncada and Alexander Gómez, later continuing under the guidance of maestro and composer Alfredo Rugeles (former Artistic Director of the Simón Bolívar Symphony) in the National Experimental University of Arts in Caracas for the Bachelor in conducting, and Maestra Teresa Hernández (National Director of the Integral Chair of Orchestra Conducting and currently representative of El Sistema in Spain). He attended masterclasses with Dick Van Gasteren, Miguel Ángel Monroy, Alfredo Ascanio, Eddy Marcano, Régulo Stabilito, and David Cubek.
+                        </p>
+
+                        <div class="bio-quote-block">
+                            <p>«An orchestra is not merely an ensemble of instruments; it is a collective pulse where discipline, joy, and deep human connection converge into sound.»</p>
+                        </div>
+
+                        <p>
+                            As musical director, Daniel was regularly invited to conduct several orchestras in his country, such as Falcón Regional Youth Symphony, Youth Symphony Orchestra of the Music Conservatory Simón Bolívar, La Victoria Youth Symphony, San Sebastián de los Reyes Youth Symphony, Ciudad Guayana Youth Symphony, and San Antonio de Los Altos Youth Symphony, eventually being appointed as Musical Director of INOF Symphony in Los Teques, Musical Conductor in charge of the Children and Youth Symphony Orchestras of Coro, and Assistant Conductor of the Regional del Este Youth Symphony in Caracas.
+                        </p>
+                        <p>
+                            Strongly influenced by his own remarkable education as part of El Sistema, Daniel has begun a community project of a symphony orchestra in Berlin (Germany), mostly formed by immigrants and refugees, based on his own trajectory as trombone player, lyrical singer, and arranger. He studied trombone in the Latin American Academy of Trombones in Caracas, participated in several festivals dictated by the Simón Bolívar Symphony Orchestra of Venezuela and was an active member of the Youth Symphony Orchestras of Coro, Falcón, Chacao, Youth Symphony Orchestra of the Music Conservatory Simón Bolívar, Falcón Brass Ensemble, and the Central University of Venezuela Symphony. Besides, he also studied International Relations in the Central University of Venezuela and is passionate about languages, having created a program to teach languages through the bases of Classical Music.
+                        </p>
+                    </div>
+
+                    <!-- FOOTER DEL ARTÍCULO: ENLACES -->
+                    <div class="director-bio-footer">
+                        <a href="https://danielopezpiepoli.com" target="_blank" rel="noopener noreferrer" class="link-official-site">
+                            Visit Official Website: danielopezpiepoli.com &rarr;
+                        </a>
+
+                        <div class="director-nav-btns">
+                            <a href="project.html" class="btn-director-ghost">The Project & Vision</a>
+                            <a href="program.html" class="btn-director-gold">Season 2026 Concerts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Notice / Impressum | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: IMPRESSUM / LEGAL NOTICE
+         ========================================= -->
+    <main class="legal-page">
+
+        <section class="legal-hero">
+            <span class="section-tag">Statutory Information</span>
+            <h1 class="page-title">Impressum / Legal Notice</h1>
+            <div class="short-line"></div>
+            <p class="legal-sub-intro">
+                Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / Information pursuant to § 5 DDG.
+            </p>
+        </section>
+
+        <article class="legal-card-layout">
+
+            <!-- 1. IDENTIFICACIÓN DE LA ASOCIACIÓN -->
+            <section class="legal-block">
+                <h2>1. Entity / Betreiber der Website</h2>
+                <div class="legal-entity-box">
+                    <p><strong>Berlinisches Sinfonieorchester e. V.</strong></p>
+                    <p>Eingetragener Verein (e. V.) nach deutschem Recht</p>
+                    <p><strong>Registergericht:</strong> Amtsgericht Charlottenburg (Berlin)</p>
+                    <p><strong>Registernummer:</strong> VR 42493 B
+                        <a href="https://www.handelsregister.de/rp_web/sucheErgebnisse/welcome.xhtml?cid=1" target="_blank" rel="noopener noreferrer" class="legal-verify-link">
+                            [Amtlich verifizieren / Verify at Registerportal &rarr;]
+                        </a>
+                    </p>
+                    <p><strong>Sitz des Vereins:</strong> Berlin, Deutschland</p>
+                    <p><strong>Steuernummer (Finanzamt für Körperschaften I, Berlin):</strong> 27/648/0000 0000 0000 0073 9</p>
+                </div>
+            </section>
+
+            <!-- 2. DIRECCIÓN Y CONTACTO -->
+            <section class="legal-block">
+                <h2>2. Postal Address & Direct Contact / Anschrift & Kontakt</h2>
+                <p>
+                    Berlinisches Sinfonieorchester e. V.<br>
+                    Weißenburger Straße 18<br>
+                    13595 Berlin<br>
+                    Deutschland / Germany
+                </p>
+                <div class="legal-contact-list">
+                    <p><strong>E-Mail:</strong> <a href="mailto:info@berlinisches-sinfonieorchester.de">info@berlinisches-sinfonieorchester.de</a></p>
+                    <p><strong>Telefon:</strong> <a href="tel:+4917632028429">+49 176 32028429</a></p>
+                    <p><strong>Website:</strong> <a href="https://berlinisches-sinfonieorchester.de">www.berlinisches-sinfonieorchester.de</a></p>
+                </div>
+            </section>
+
+            <!-- 3. REPRESENTACIÓN LEGAL (§ 26 BGB) -->
+            <section class="legal-block">
+                <h2>3. Authorized Representation / Vertretungsberechtigter Vorstand (§ 26 BGB)</h2>
+                <p>Der Verein wird gerichtlich und außergerichtlich durch den geschäftsführenden Vorstand vertreten (jeweils mit Einzelvertretungsmacht gemäß Satzung):</p>
+                <ul>
+                    <li><strong>Daniel Alejandro López</strong> (Vorsitzender / President)</li>
+                    <li><strong>Gabriela Jose González López</strong> (Schatzmeisterin / Treasurer)</li>
+                </ul>
+                <p><em>Erweiterter Vorstand / Extended Board:</em> Stella Karalis (Stellv. Vorsitzende / Vice-President), Ebru Algül (Schriftführerin / Secretary).</p>
+            </section>
+
+            <!-- 4. RESPONSABLE EDITORIAL (MStV) -->
+            <section class="legal-block">
+                <h2>4. Responsible for Content / Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h2>
+                <p>
+                    Daniel Alejandro López<br>
+                    Berlinisches Sinfonieorchester e. V.<br>
+                    Weißenburger Straße 18<br>
+                    13595 Berlin, Deutschland<br>
+                    E-Mail: <a href="mailto:info@berlinisches-sinfonieorchester.de">info@berlinisches-sinfonieorchester.de</a>
+                </p>
+            </section>
+
+            <!-- 5. DESCARGO DE RESPONSABILIDAD -->
+            <section class="legal-block">
+                <h2>5. Disclaimer / Haftungsausschluss</h2>
+                
+                <h3>Haftung für Inhalte (Liability for Content)</h3>
+                <p>
+                    Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+                </p>
+
+                <h3>Haftung für Links (Liability for External Links)</h3>
+                <p>
+                    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                </p>
+
+                <h3>Urheberrecht (Copyright)</h3>
+                <p>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+            </section>
+
+            <!-- 6. RESOLUCIÓN DE DISPUTAS ONLINE -->
+            <section class="legal-block">
+                <h2>6. Dispute Resolution / Verbraucherstreitbeilegung</h2>
+                <p>
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.
+                </p>
+                <p>
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" class="active-footer" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

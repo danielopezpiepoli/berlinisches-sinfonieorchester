@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support the Vision | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: SUPPORT THE VISION
+         ========================================= -->
+    <main class="support-page">
+
+        <!-- 1. HERO EDITORIAL -->
+        <section class="support-hero">
+            <span class="section-tag">Philanthropy & Impact</span>
+            <h1 class="page-title">Support the Vision</h1>
+            <div class="short-line"></div>
+            <p class="support-intro">
+                Music is more than performance; it is a catalyst for social transformation. By supporting the Berlinisches Sinfonieorchester e.V., you empower exceptional emerging artists, foster cultural integration in Berlin, and sustain an uncompromising symphonic excellence.
+            </p>
+        </section>
+
+        <!-- 2. LOS 3 PILARES DE IMPACTO -->
+        <section class="impact-pillars-section">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">01</div>
+                    <h3>Artistic Opportunity</h3>
+                    <p>We provide a premier platform and professional development for extraordinary musicians, bridging academia and the global orchestral stage.</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">02</div>
+                    <h3>Social Transformation</h3>
+                    <p>Rooted in the philosophy of <em>El Sistema</em>, we harness the collective discipline of orchestral music to unite diverse cultures across Berlin.</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">03</div>
+                    <h3>Cultural Vitality</h3>
+                    <p>From Berlin's iconic concert halls to public open-air performances, we bring symphonic music closer to contemporary audiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NIVELES DE MECENAZGO (SIN PRECIOS) -->
+        <section class="patron-tiers-section">
+            <div class="section-title-wrapper">
+                <span class="section-tag">Join the Circle</span>
+                <h2 class="sub-title">Pillars of Patronage</h2>
+                <div class="short-line"></div>
+            </div>
+
+            <div class="tiers-grid">
+                
+                <!-- Tier 1: Friends Circle -->
+                <div class="tier-card">
+                    <span class="tier-tag">Individual Patronage</span>
+                    <h3 class="tier-name">Friends Circle</h3>
+                    <div class="tier-focus">Core Annual Support</div>
+                    <p class="tier-desc">Ideal for passionate concertgoers who wish to closely follow the orchestra's development and season journey.</p>
+                    <ul class="tier-benefits">
+                        <li><i class="fa-solid fa-check"></i> Priority booking window for all season concerts.</li>
+                        <li><i class="fa-solid fa-check"></i> Name recognition in our printed concert programs.</li>
+                        <li><i class="fa-solid fa-check"></i> Exclusive patron communications from the Music Director.</li>
+                    </ul>
+                    
+                    <!-- Botones de Acción: Diálogo o Donación Rápida -->
+                    <div class="tier-actions">
+                        <a href="#patronForm" class="btn-tier" data-tier="Friends Circle">Join via Inquiry</a>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=TU_ID_DE_PAYPAL" target="_blank" rel="noopener noreferrer" class="btn-paypal-link" title="Direct donation via PayPal">
+                            <i class="fa-brands fa-paypal"></i> Donate with PayPal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Patron's Circle (Destacado) -->
+                <div class="tier-card tier-card-featured">
+                    <div class="featured-badge">Key Benefactor</div>
+                    <span class="tier-tag">Sustaining Philanthropy</span>
+                    <h3 class="tier-name">Patron's Circle</h3>
+                    <div class="tier-focus">Artistic & Chair Sponsorship</div>
+                    <p class="tier-desc">Directly champions specific orchestral positions, masterclasses, and ambitious symphonic productions.</p>
+                    <ul class="tier-benefits">
+                        <li><i class="fa-solid fa-check"></i> All benefits of the Friends Circle.</li>
+                        <li><i class="fa-solid fa-check"></i> Invitations to private dress rehearsals at Konzerthaus & Philharmonie.</li>
+                        <li><i class="fa-solid fa-check"></i> Private receptions with the conductor, soloists, and ensemble.</li>
+                    </ul>
+                    <a href="#patronForm" class="btn-tier btn-tier-featured" data-tier="Patron's Circle">Become a Patron &rarr;</a>
+                </div>
+
+                <!-- Tier 3: Corporate & Foundations -->
+                <div class="tier-card">
+                    <span class="tier-tag">Institutional</span>
+                    <h3 class="tier-name">Corporate & Foundations</h3>
+                    <div class="tier-focus">Strategic Cultural Alliance</div>
+                    <p class="tier-desc">
+                        Tailored alignment for organizations and foundations seeking meaningful social and cultural engagement in Berlin.
+                        <a href="partners.html" class="inline-partner-link">View our current partner network &rarr;</a>
+                    </p>
+                    <ul class="tier-benefits">
+                        <li><i class="fa-solid fa-check"></i> Prominent logo presence across all print, digital, and media assets.</li>
+                        <li><i class="fa-solid fa-check"></i> VIP corporate ticket allocations and private hospitality options.</li>
+                        <li><i class="fa-solid fa-check"></i> Chamber music performances for institutional and corporate events.</li>
+                    </ul>
+                    <a href="#patronForm" class="btn-tier" data-tier="Corporate Partnership">Inquire Partnership &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESTATUTOS -->
+        <section class="transparency-section">
+            <div class="section-title-wrapper">
+                <span class="section-tag">Governance & Transparency</span>
+                <h2 class="sub-title">Non-Profit Integrity</h2>
+                <div class="short-line"></div>
+            </div>
+
+            <!-- TARJETA DE DESCARGA -->
+            <div class="transparency-download-card">
+                <div class="transparency-icon">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </div>
+                <div class="transparency-text">
+                    <h4>Association Statutes (Satzung)</h4>
+                    <p>Official statutes and non-profit governance regulations of Berlinisches Sinfonieorchester e.V.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1fMV3zMPJpNktayH-Y_OiIaNNOk0DIOPc/view?usp=drive_link" target="_blank" class="btn-download-pdf">
+                    Download PDF <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- 4. DATOS DE TRANSFERENCIA DIRECTA, PAYPAL & FISCALIDAD -->
+        <section class="direct-support-strip">
+            <div class="direct-support-wrapper">
+                <div class="tax-info-box">
+                    <div class="tax-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div>
+                        <h4>Tax-Deductible Contributions</h4>
+                        <p>Berlinisches Sinfonieorchester e.V. is recognized as a non-profit organization (<em>gemeinnütziger Verein</em>). All donations and patronage contributions are fully tax-deductible under German law. A formal donation receipt (<em>Spendenbescheinigung</em>) is issued for all contributions.</p>
+                    </div>
+                </div>
+
+                <div class="payment-methods-card">
+                    <!-- PESTAÑA 1: TRANSFERENCIA BANCARIA -->
+                    <div class="bank-details-block">
+                        <h4>Direct Bank Transfer</h4>
+                        <div class="bank-row">
+                            <span class="bank-label">Account Holder:</span>
+                            <span class="bank-val">Berlinisches Sinfonieorchester e.V.</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">IBAN:</span>
+                            <span class="bank-val bank-copy" id="ibanCode" title="Click to copy">DE00 0000 0000 0000 0000 00 <i class="fa-regular fa-copy"></i></span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">BIC / SWIFT:</span>
+                            <span class="bank-val">BELADEBXXXX</span>
+                        </div>
+                    </div>
+
+                    <div class="payment-divider">
+                        <span>or instant transfer</span>
+                    </div>
+
+                    <!-- PESTAÑA 2: BOTÓN OFICIAL PAYPAL ELEGANTE -->
+                    <div class="paypal-direct-block">
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=TU_ID_DE_PAYPAL" target="_blank" rel="noopener noreferrer" class="btn-paypal-direct">
+                            <i class="fa-brands fa-paypal"></i> Donate via PayPal
+                        </a>
+                        <span class="paypal-note">Credit Card, Debit & PayPal balance accepted.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FORMULARIO DE CONTACTO PARA MECENAS & SPONSORS -->
+        <section class="patron-contact-section" id="patronForm">
+            <div class="patron-form-container">
+                <div class="section-title-wrapper">
+                    <span class="section-tag">Direct Dialogue</span>
+                    <h2 class="sub-title">Start the Conversation</h2>
+                    <div class="short-line"></div>
+                    <p class="form-lead">Interested in supporting the orchestra, sponsoring an instrument chair, or exploring institutional partnership? Let us know how you would like to engage.</p>
+                </div>
+
+                <form action="https://formspree.io/f/placeholder" method="POST" class="bso-contact-form" id="patronInquiryForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patronName">Full Name / Contact Person *</label>
+                            <input type="text" id="patronName" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="patronEmail">Email Address *</label>
+                            <input type="email" id="patronEmail" name="email" required placeholder="name@domain.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patronOrg">Organization / Company (Optional)</label>
+                            <input type="text" id="patronOrg" name="organization" placeholder="e.g. Foundation or Company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="patronLevel">Support Category *</label>
+                            <select id="patronLevel" name="support_level" required>
+                                <option value="Friends Circle">Friends Circle</option>
+                                <option value="Patron's Circle">Patron's Circle</option>
+                                <option value="Corporate Partnership">Corporate & Foundation Partnership</option>
+                                <option value="Individual Donation">Individual / Custom Contribution</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patronMessage">Message / Vision *</label>
+                        <textarea id="patronMessage" name="message" rows="5" required placeholder="Tell us about your interests or how you would like to collaborate with the orchestra..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-event btn-submit">
+                        Submit Support Inquiry —
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

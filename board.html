@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team & Board | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger active-nav">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" class="active-subnav" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: THE TEAM & LEADERSHIP
+         ========================================= -->
+    <main class="board-page">
+
+        <!-- 1. HERO EDITORIAL -->
+        <section class="board-hero">
+            <span class="section-tag">People Behind the Music</span>
+            <h1 class="page-title">The Board & Team</h1>
+            <div class="short-line"></div>
+            <p class="board-intro">
+                Behind the rehearsals and concert halls is a close-knit group of musicians, organizers, and creators dedicated to building an inspiring, open home for orchestral music in Berlin.
+            </p>
+        </section>
+
+        <!-- 2. PERFILES HUMANOS Y EDITORIALES (FORMATO ABIERTO) -->
+        <section class="board-narrative-section">
+
+            <!-- 1. DANIEL LÓPEZ PIEPOLI -->
+            <article class="profile-story-item">
+                <div class="profile-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="assets/images/daniel-lopez-piepoli-portrait-board.JPG" alt="Daniel López Piepoli" onerror="this.src='https://via.placeholder.com/500x650?text=Daniel+L%C3%B3pez'">
+                        <div class="photo-accent-tag">Music Direction</div>
+                    </div>
+                </div>
+                <div class="profile-text-col">
+                    <span class="profile-role">President, Artistic & Music Director</span>
+                    <h2 class="profile-name">Daniel López Piepoli</h2>
+                    <p class="profile-intro-lead">
+                        Daniel founded the Berlinisches Sinfonieorchester with a clear belief: that an orchestra should be a vibrant, welcoming community where exceptional musical rigor meets genuine human connection.
+                    </p>
+                    <p>
+                        As President and Music Director, he shapes the orchestra's artistic vision, conducts our season programs, and builds partnerships with Berlin’s cultural venues. He works closely with musicians across the city to scout talent, curate bold repertoire, and ensure the project remains sustainable and true to its social and musical mission.
+                    </p>
+                    <div class="profile-actions">
+                        <a href="director.html" class="link-warm">Read Daniel's Conductor Biography &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. STELLA KARALIS -->
+            <article class="profile-story-item profile-reverse">
+                <div class="profile-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="images/board/stella-karalis.jpg" alt="Stella Karalis" onerror="this.src='https://via.placeholder.com/500x650?text=Stella+Karalis'">
+                        <div class="photo-accent-tag">Artistic Planning</div>
+                    </div>
+                </div>
+                <div class="profile-text-col">
+                    <span class="profile-role">Vice-President & Artistic Planning Director</span>
+                    <h2 class="profile-name">Stella Karalis</h2>
+                    <p class="profile-intro-lead">
+                        Stella is the vital bridge between musical ideas and their stage execution, bringing tireless energy and a keen artistic ear to every production.
+                    </p>
+                    <p>
+                        Working side by side with the Music Director, Stella helps curate and balance our concert programs, assesses audition recordings, and uses her extensive network to recruit outstanding instrumentalists for our roster. She also oversees the critical logistics of sheet music research, edition licensing, and digital score distribution.
+                    </p>
+                </div>
+            </article>
+
+            <!-- 3. GABRIELA JOSE GONZÁLEZ -->
+            <article class="profile-story-item">
+                <div class="profile-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="images/board/gabriela-gonzalez.jpg" alt="Gabriela Jose González" onerror="this.src='https://via.placeholder.com/500x650?text=Gabriela+Gonz%C3%A1lez'">
+                        <div class="photo-accent-tag">Finance & Growth</div>
+                    </div>
+                </div>
+                <div class="profile-text-col">
+                    <span class="profile-role">Treasurer</span>
+                    <h2 class="profile-name">Gabriela Jose González</h2>
+                    <p class="profile-intro-lead">
+                        Gabriela protects the sustainability and transparent heartbeat of the orchestra, making sure great artistic ideas are backed by solid financial grounding.
+                    </p>
+                    <p>
+                        As Treasurer, she coordinates annual budget forecasting, tracks concert production expenses, and oversees the association’s non-profit fiscal compliance. Her careful management ensures that every contribution from our patrons and ticket holders directly powers our musicians and concert productions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- 4. EBRU ALGÜL -->
+            <article class="profile-story-item profile-reverse">
+                <div class="profile-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="images/board/ebru-algul.jpg" alt="Ebru Algül" onerror="this.src='https://via.placeholder.com/500x650?text=Ebru+Alg%C3%BCl'">
+                        <div class="photo-accent-tag">Musician Relations</div>
+                    </div>
+                </div>
+                <div class="profile-text-col">
+                    <span class="profile-role">Secretary & Chief of Communications</span>
+                    <h2 class="profile-name">Ebru Algül</h2>
+                    <p class="profile-intro-lead">
+                        Ebru is the voice that keeps our ensemble connected, fostering open dialogue, community warmth, and seamless coordination.
+                    </p>
+                    <p>
+                        She manages internal communication channels with our musicians, gathers feedback from the orchestra sections, and advises the artistic team on instrument logistics for unusual orchestrations. As Secretary, she also maintains the official legal documentation, meeting records, and administrative statutes of the association.
+                    </p>
+                </div>
+            </article>
+
+            <!-- 5. ISABEL BARCIELA -->
+            <article class="profile-story-item">
+                <div class="profile-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="images/board/isabel-barciela.jpg" alt="Isabel Barciela" onerror="this.src='https://via.placeholder.com/500x650?text=Isabel+Barciela'">
+                        <div class="photo-accent-tag">Audit & Compliance</div>
+                    </div>
+                </div>
+                <div class="profile-text-col">
+                    <span class="profile-role">Auditor</span>
+                    <h2 class="profile-name">Isabel Barciela</h2>
+                    <p class="profile-intro-lead">
+                        Isabel provides an independent, meticulous eye to guarantee our adherence to ethical standards and non-profit integrity.
+                    </p>
+                    <p>
+                        Her role as Kassenprüferin ensures that the orchestra’s books, bank movements, and fiscal reports strictly follow German statutory law for non-profit entities (<em>gemeinnütziger Verein</em>), giving our members, sponsors, and grantmakers total peace of mind.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- 3. CIERRE CÁLIDO & PUENTE EDITORIAL -->
+        <section class="board-community-strip">
+            <div class="community-content">
+                <span class="community-tag">Join Our Journey</span>
+                <h3>An Open, Welcoming Community</h3>
+                <p>
+                    Whether you are an orchestral musician looking to play with us, a concert lover wishing to join our Friends Circle, or an institution seeking cultural collaboration, we would love to connect.
+                </p>
+                <div class="community-btn-group">
+                    <a href="contact.html?topic=join" class="btn-tier btn-tier-featured">Join the Orchestra &rarr;</a>
+                    <a href="support-vision.html" class="btn-tier">Support the Vision</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

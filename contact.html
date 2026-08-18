@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: SECCIÓN DE CONTACTO
+         ========================================= -->
+    <main class="contact-page">
+        
+        <div class="contact-hero">
+            <span class="section-tag">Direct Communication</span>
+            <h1 class="page-title">Get in Touch</h1>
+            <div class="short-line"></div>
+            <p class="contact-intro">For general inquiries, musician auditions, or press relations, write to our management in Berlin using the form below or via direct email.</p>
+        </div>
+
+        <div class="contact-layout-wrapper">
+            
+            <!-- PANEL LATERAL: INFORMACIÓN Y ACCESO A DONACIONES -->
+            <aside class="contact-info-panel">
+                
+                <div class="info-block">
+                    <h3>Central Office</h3>
+                    <p><strong>Berlinisches Sinfonieorchester e.V.</strong></p>
+                    <p>Berlin, Germany</p>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="info-link">info@berlinisches-sinfonieorchester.de</a>
+                </div>
+
+                <div class="info-block" id="auditionGuidelines">
+                    <h3>Audition Submissions</h3>
+                    <p>When contacting us regarding open positions or guest soloist engagements, please include links to unedited recordings and your musical resume.</p>
+                </div>
+
+                <!-- TARJETA EDITORIAL: REDIRECCIÓN A SUPPORT THE VISION -->
+                <div class="support-redirect-card">
+                    <span class="redirect-tag">Philanthropy & Partnerships</span>
+                    <h4>Looking to Support Our Vision?</h4>
+                    <p>If you represent a corporate sponsor, foundation, or wish to become a patron, explore our dedicated support programs.</p>
+                    <a href="support-vision.html" class="redirect-link">Explore Support Options &rarr;</a>
+                </div>
+
+            </aside>
+
+            <!-- PANEL PRINCIPAL: FORMULARIO -->
+            <section class="contact-form-panel">
+                <form action="https://formspree.io/f/placeholder" method="POST" class="bso-contact-form" id="contactForm">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="name" required placeholder="e.g. Clara Schumann">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address *</label>
+                            <input type="email" id="emailAddress" name="email" required placeholder="clara@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactTopic">Inquiry Topic *</label>
+                        <select id="contactTopic" name="topic" required>
+                            <option value="general">General Inquiry & Ticketing</option>
+                            <option value="join">Musicians & Audition Inquiry</option>
+                            <option value="press">Press & Media Relations</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- CAMPOS DINÁMICOS PARA AUDICIONES (SE ACTIVAN AL ELEGIR "JOIN") -->
+                    <div class="dynamic-field-group" id="musicianFields" style="display: none;">
+
+                        <!-- Mensaje cálido y motivador para músicos -->
+                    <div class="audition-welcome-banner">
+                        <p class="audition-welcome-title">We are eager to discover your artistry and create music together.</p>
+                        <p class="audition-welcome-subtitle">Tell us about your musical journey and share your recent performance links below.</p>
+                    </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="instrument">Primary Instrument *</label>
+                                <input type="text" id="instrument" name="instrument" placeholder="e.g. Cello, Oboe, Horn">
+                            </div>
+                            <div class="form-group">
+                                <label for="videoLink">Video / Audio Portfolio (URL)</label>
+                                <input type="url" id="videoLink" name="video_url" placeholder="https://youtube.com/... or cloud link">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageSubject">Subject</label>
+                        <input type="text" id="messageSubject" name="subject" placeholder="Summary of your message">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageContent">Message *</label>
+                        <textarea id="messageContent" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-event btn-submit">
+                        Send Message —
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

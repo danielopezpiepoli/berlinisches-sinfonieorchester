@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy / Datenschutzerklärung | Berlinisches Sinfonieorchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER (Mismo estándar) -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-box">
+                    <div class="logo-symbol">BSO</div> 
+                    <div class="logo-text">
+                        <span class="line-1">Berlinisches</span>
+                        <span class="line-2">Sinfonieorchester</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="header-right" id="headerNav">
+            <ul class="nav-menu">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" data-key="about" class="dropdown-trigger">
+                        About us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="project.html" data-key="project">The project</a></li>
+                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="board.html" data-key="board">Artistic Board</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="calendar" class="dropdown-trigger">
+                        Calendar 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
+                        <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="gallery" class="dropdown-trigger">
+                        Gallery
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
+                        <li><a href="videos.html" data-key="videos">Videos</a></li>
+                        <li><a href="photos.html" data-key="photos">Photos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-key="support" class="dropdown-trigger">
+                        Support us 
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="partners.html" data-key="partners">Partnerships</a></li>
+                        <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+
+                <li class="dropdown"> 
+                    <a href="#" class="lang-current dropdown-trigger">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+                        <span>EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-content lang-options">
+                        <li><a href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch (DE)</a></li>
+                        <li><a href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="EN"> English (EN)</a></li>
+                    </ul>
+                </li>
+
+                <li class="search-wrapper">
+                    <div class="search-container" id="searchContainer">
+                        <input type="text" class="search-input" placeholder="Search..." id="searchInput" autocomplete="off">
+                        <div class="search-btn" id="searchBtn">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- =========================================
+         MAIN: PRIVACY POLICY / DATENSCHUTZ
+         ========================================= -->
+    <main class="legal-page">
+
+        <section class="legal-hero">
+            <span class="section-tag">Data Protection & Privacy</span>
+            <h1 class="page-title">Privacy Policy</h1>
+            <div class="short-line"></div>
+            <p class="legal-sub-intro">
+                Information on data processing in accordance with the EU General Data Protection Regulation (GDPR / DSGVO).
+            </p>
+        </section>
+
+        <article class="legal-card-layout">
+
+            <!-- 1. RESPONSABLE DEL TRATAMIENTO -->
+            <section class="legal-block">
+                <h2>1. Data Controller / Verantwortliche Stelle</h2>
+                <p>Verantwortlicher für die Datenverarbeitung auf dieser Website ist:</p>
+                <div class="legal-entity-box">
+                    <p><strong>Berlinisches Sinfonieorchester e. V.</strong></p>
+                    <p><em>Amtsgericht Charlottenburg (Berlin), VR 42493 B</em></p>
+                    <p>Vertreten durch den geschäftsführenden Vorstand (§ 26 BGB):</p>
+                    <p>• <strong>Daniel Alejandro López</strong> (Vorsitzender / President)</p>
+                    <p>• <strong>Gabriela Jose González López</strong> (Schatzmeisterin / Treasurer)</p>
+                    <p>E-Mail: <a href="mailto:info@berlinisches-sinfonieorchester.de">info@berlinisches-sinfonieorchester.de</a></p>
+                </div>
+            </section>
+
+            <!-- 2. PRINCIPIOS GENERALES & SSL -->
+            <section class="legal-block">
+                <h2>2. General Principles & SSL/TLS Encryption</h2>
+                <p>
+                    Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                </p>
+                <p>
+                    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen oder Audition-Einsendungen, eine <strong>SSL/TLS-Verschlüsselung</strong>. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von <code>http://</code> auf <code>https://</code> wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                </p>
+            </section>
+
+            <!-- 3. DATENERFASSUNG (LOGS & FORMULARIOS) -->
+            <section class="legal-block">
+                <h2>3. Data Collection on Our Website / Datenerfassung</h2>
+                
+                <h3>Server-Log-Dateien (Server Log Files)</h3>
+                <p>
+                    Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (Browsertyp, Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse). Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zur Gewährleistung einer fehlerfreien und sicheren Bereitstellung der Website.
+                </p>
+
+                <h3>Kontaktformular, Auditions & Mitgliedschaften</h3>
+                <p>
+                    Wenn Sie uns per Kontaktformular (z. B. für allgemeine Anfragen, Auditions / Probespiele oder Mitgliedsanträge im Förderverein) Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                </p>
+                <p>
+                    Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung oder vorvertragliche Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung Ihres Anliegens).
+                </p>
+            </section>
+
+            <!-- 4. SERVICIOS EXTERNOS (YOUTUBE, PAYPAL) -->
+            <section class="legal-block">
+                <h2>4. Third-Party Services & Media / Externe Dienste</h2>
+                
+                <h3>YouTube Embeds</h3>
+                <p>
+                    Unsere Website bettet Videos von YouTube ein (Betreiber: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Wir nutzen YouTube im erweiterten Datenschutzmodus (<code>youtube-nocookie.com</code>), sodass erst beim Abspielen des Videos Daten an YouTube übertragen werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Interesse an einer ansprechenden Darstellung unseres künstlerischen Schaffens).
+                </p>
+
+                <h3>Zahlungsdienste & Spenden (PayPal / Banküberweisung)</h3>
+                <p>
+                    Auf unserer Website (unter <em>Support the Vision</em>) bieten wir die Möglichkeit, Förderbeiträge oder Spenden via PayPal oder Banküberweisung zu leisten. Anbieter von PayPal ist die PayPal (Europe) S.à.r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Bei Zahlung werden die eingegebenen Zahlungsdaten auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO an PayPal übermittelt.
+                </p>
+            </section>
+
+            <!-- 5. DERECHOS DEL USUARIO (ART. 15-21 DSGVO) -->
+            <section class="legal-block">
+                <h2>5. Your Rights as a Data Subject / Ihre Rechte</h2>
+                <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:</p>
+                <ul>
+                    <li><strong>Auskunft (Art. 15 DSGVO):</strong> Kostenlose Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung.</li>
+                    <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Berichtigung unrichtiger oder unvollständiger Daten.</li>
+                    <li><strong>Löschung (Art. 17 DSGVO):</strong> Löschung Ihrer bei uns gespeicherten Daten, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                    <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.</li>
+                    <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Aushändigung der Daten in einem strukturierten, gängigen und maschinenlesbaren Format.</li>
+                    <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Widerspruch gegen die Verarbeitung Ihrer Daten aus Gründen, die sich aus Ihrer besonderen Situation ergeben.</li>
+                    <li><strong>Beschwerderecht bei der Aufsichtsbehörde (Art. 77 DSGVO):</strong> Beschwerderecht bei der zuständigen Aufsichtsbehörde: <em>Berliner Beauftragte für Datenschutz und Informationsfreiheit</em>.</li>
+                </ul>
+                <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter <a href="mailto:info@berlinisches-sinfonieorchester.de">info@berlinisches-sinfonieorchester.de</a> an uns wenden.</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- FOOTER (Mismo estándar) -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <a href="impressum.html" data-key="impressum">Legal Notice</a>
+                <span class="separator">|</span>
+                <a href="privacy.html" class="active-footer" data-key="privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-logo-small">
+                    <span class="bso-sigla">BSO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span class="sep">|</span> 
+                Web Design by 
+                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
