@@ -307,7 +307,12 @@
                 </div>
 
                 <form action="https://api.web3forms.com/submit" method="POST" class="bso-contact-form" id="patronInquiryForm">
+                    <!-- Llave vinculada a foerderung@berlinisches-sinfonieorchester.de -->
                     <input type="hidden" name="access_key" value="01a715a7-4b9f-4f2f-9801-18a747bad89a">
+                    <input type="hidden" name="from_name" value="BSO Patron Portal">
+                    <input type="hidden" name="subject" id="patronEmailSubject" value="[SUPPORT THE VISION] Friends Circle">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="patronName">Full Name / Contact Person *</label>

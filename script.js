@@ -539,43 +539,107 @@ if (contactForm) {
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
-// --- G. GESTIÓN DE SUPPORT-VISION.HTML (SELECCIÓN DE TIER Y COPIA DE IBAN) ---
-    const tierButtons = document.querySelectorAll('.btn-tier');
-    const patronLevelSelect = document.getElementById('patronLevel');
-    const ibanCopyBtn = document.getElementById('ibanCode');
+// --- G. GESTIÓN DE SUPPORT-VISION.HTML (SELECCIÓN DE TIER, COPIA DE IBAN, ASUNTO DINÁMICO Y AJAX) ---
+const tierButtons = document.querySelectorAll('.btn-tier');
+const patronLevelSelect = document.getElementById('patronLevel');
+const patronEmailSubject = document.getElementById('patronEmailSubject');
+const ibanCopyBtn = document.getElementById('ibanCode');
+const patronInquiryForm = document.getElementById('patronInquiryForm');
 
-    // 1. Al hacer clic en un botón de Tier, preselecciona el nivel y hace scroll suave al formulario
-    if (tierButtons.length > 0 && patronLevelSelect) {
-        tierButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
+// Diccionario de asuntos estructurados para filtrado en Gmail
+const patronSubjectMap = {
+    "Friends Circle": "[SUPPORT THE VISION] Friends Circle",
+    "Patron's Circle": "[SUPPORT THE VISION] Patron's Circle",
+    "Corporate Partnership": "[SUPPORT THE VISION] Corporate & Foundation Partnership",
+    "Individual Donation": "[SUPPORT THE VISION] Individual & Custom Contribution",
+    "Other": "[SUPPORT THE VISION] Other Inquiry | Support"
+};
+
+function updatePatronSubject(level) {
+    if (patronEmailSubject && patronSubjectMap[level]) {
+        patronEmailSubject.value = patronSubjectMap[level];
+    }
+}
+
+// 1. Al hacer clic en un botón de Tier, preselecciona el nivel, actualiza el asunto y hace scroll suave
+if (tierButtons.length > 0 && patronLevelSelect) {
+    tierButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const selectedTier = this.getAttribute('data-tier');
+            if (selectedTier) {
                 e.preventDefault();
-                const selectedTier = this.getAttribute('data-tier');
+                patronLevelSelect.value = selectedTier;
+                updatePatronSubject(selectedTier);
                 
-                if (selectedTier) {
-                    patronLevelSelect.value = selectedTier;
-                }
-
                 const formTarget = document.getElementById('patronForm');
                 if (formTarget) {
                     formTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
-            });
+            }
         });
-    }
+    });
+}
 
-    // 2. Copiar IBAN al portapapeles con un clic
-    if (ibanCopyBtn) {
-        ibanCopyBtn.addEventListener('click', function() {
-            const rawIban = this.textContent.trim().split(' ')[0] ? "DE00000000000000000000" : "";
-            navigator.clipboard.writeText(rawIban).then(() => {
-                const originalHTML = this.innerHTML;
-                this.innerHTML = `Copied! <i class="fa-solid fa-check" style="color: var(--gold);"></i>`;
-                setTimeout(() => {
-                    this.innerHTML = originalHTML;
-                }, 2000);
-            });
+// 2. Al cambiar manualmente el selector de categoría
+if (patronLevelSelect) {
+    patronLevelSelect.addEventListener('change', function() {
+        updatePatronSubject(this.value);
+    });
+}
+
+// 3. Copiar IBAN al portapapeles con un clic
+if (ibanCopyBtn) {
+    ibanCopyBtn.addEventListener('click', function() {
+        const rawIban = this.textContent.trim().split(' ')[0] ? "DE00000000000000000000" : "";
+        navigator.clipboard.writeText(rawIban).then(() => {
+            const originalHTML = this.innerHTML;
+            this.innerHTML = `Copied! <i class="fa-solid fa-check" style="color: var(--gold);"></i>`;
+            setTimeout(() => {
+                this.innerHTML = originalHTML;
+            }, 2000);
         });
-    }
+    });
+}
+
+// 4. Envío asíncrono con Web3Forms (sin redirección externa)
+if (patronInquiryForm) {
+    patronInquiryForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Sending Inquiry...";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                submitBtn.textContent = "Inquiry Sent Successfully! ✓";
+                submitBtn.style.backgroundColor = "#2e7d32";
+                this.reset();
+                updatePatronSubject("Friends Circle"); // Restablece asunto al valor por defecto
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.backgroundColor = "";
+                }, 4000);
+            } else {
+                submitBtn.textContent = "Error Sending. Try Again";
+                submitBtn.disabled = false;
+            }
+        } catch (err) {
+            submitBtn.textContent = "Connection Error. Try Again";
+            submitBtn.disabled = false;
+        }
+    });
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------PROGRAM.HTML 
