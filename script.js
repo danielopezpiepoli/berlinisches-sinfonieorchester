@@ -429,37 +429,110 @@ document.addEventListener('DOMContentLoaded', function() {
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
-// --- F. GESTIÓN DEL FORMULARIO DE CONTACTO & AUDICIONES DINÁMICAS ---
-    const contactTopic = document.getElementById('contactTopic');
-    const musicianFields = document.getElementById('musicianFields');
-    const instrumentInput = document.getElementById('instrument');
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------CONTACT.HTML 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
 
-    function toggleAuditionFields(topic) {
-        if (!musicianFields) return;
-        
+// --- F. GESTIÓN DEL FORMULARIO DE CONTACTO, AUDICIONES DINÁMICAS Y ENRUTAMIENTO DE ALIAS ---
+const contactTopic = document.getElementById('contactTopic');
+const musicianFields = document.getElementById('musicianFields');
+const instrumentInput = document.getElementById('instrument');
+const contactAccessKey = document.getElementById('contactAccessKey');
+const contactEmailSubject = document.getElementById('contactEmailSubject');
+const contactForm = document.getElementById('contactForm');
+
+// Mapeo dinámico de llaves y asuntos según la opción elegida
+const topicRouting = {
+    general: {
+        key: "aa41de98-218a-4163-a134-2779ec77ed2b", // info@
+        subject: "[GENERAL] Website Inquiry"
+    },
+    join: {
+        key: "2ae88f47-4d04-4db7-8926-52a34397a9a3", // orchesterbuero@
+        subject: "[AUDITION] Musician Application"
+    },
+    press: {
+        key: "e0dd833e-5c65-4964-ba69-912193d386e3", // d.lopez@
+        subject: "[PRESS] Media / Press Inquiry"
+    },
+    other: {
+        key: "aa41de98-218a-4163-a134-2779ec77ed2b", // info@
+        subject: "[OTHER] General Inquiry"
+    }
+};
+
+function handleTopicChange(topic) {
+    // 1. Mostrar u ocultar campos de instrumento/grabación
+    if (musicianFields) {
         const isAudition = (topic === 'join');
         musicianFields.style.display = isAudition ? 'block' : 'none';
-        
         if (instrumentInput) {
             instrumentInput.required = isAudition;
         }
     }
 
-    if (contactTopic) {
-        // 1. Al cambiar la opción en el dropdown manualmente
-        contactTopic.addEventListener('change', function() {
-            toggleAuditionFields(this.value);
-        });
-
-        // 2. Preselección automática si viene con parámetro URL (e.g. contact.html?topic=join)
-        const urlParams = new URLSearchParams(window.location.search);
-        const topicParam = urlParams.get('topic');
-
-        if (topicParam && ['general', 'join', 'press', 'other'].includes(topicParam)) {
-            contactTopic.value = topicParam;
-            toggleAuditionFields(topicParam);
-        }
+    // 2. Cambiar dinámicamente la llave de destino y el asunto
+    if (topicRouting[topic] && contactAccessKey && contactEmailSubject) {
+        contactAccessKey.value = topicRouting[topic].key;
+        contactEmailSubject.value = topicRouting[topic].subject;
     }
+}
+
+if (contactTopic) {
+    // Escucha cambios manuales en el selector
+    contactTopic.addEventListener('change', function() {
+        handleTopicChange(this.value);
+    });
+
+    // Soporte para enlaces directos con parámetros (ej. contact.html?topic=join)
+    const urlParams = new URLSearchParams(window.location.search);
+    const topicParam = urlParams.get('topic');
+
+    if (topicParam && topicRouting[topicParam]) {
+        contactTopic.value = topicParam;
+        handleTopicChange(topicParam);
+    }
+}
+
+// Envío asíncrono vía AJAX (sin recarga de página)
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Sending Message...";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                submitBtn.textContent = "Message Sent Successfully! ✓";
+                submitBtn.style.backgroundColor = "#2e7d32";
+                this.reset();
+                handleTopicChange('general'); // Regresa al estado inicial
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.backgroundColor = "";
+                }, 4000);
+            } else {
+                submitBtn.textContent = "Error Sending. Try Again";
+                submitBtn.disabled = false;
+            }
+        } catch (err) {
+            submitBtn.textContent = "Connection Error. Try Again";
+            submitBtn.disabled = false;
+        }
+    });
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------SUPPORT-VISION.HTML 
