@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berlinisches-sinfonieorchester.de/sitemap.xml
