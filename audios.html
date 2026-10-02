@@ -10,7 +10,9 @@
 </head>
 <body>
 
-    <!-- HEADER (Mismo estándar) -->
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
     <header class="main-header">
         <div class="header-left">
             <a href="index.html" class="logo-link">
@@ -35,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger">
-                        About us 
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -44,14 +46,14 @@
                     <ul class="dropdown-content">
                         <li><a href="project.html" data-key="project">The project</a></li>
                         <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
-                        <li><a href="director.html" data-key="director">Music Director</a></li>
+                        <li><a href="director.html" class="active-subnav" data-key="director">Music Director</a></li>
                         <li><a href="board.html" data-key="board">Artistic Board</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -63,22 +65,22 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger active-nav">
-                        Gallery
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
                     <ul class="dropdown-content">
-                        <li><a href="audios.html" class="active-subnav" data-key="audios">Audios</a></li>
+                        <li><a href="audios.html" data-key="audios">Audios</a></li>
                         <li><a href="videos.html" data-key="videos">Videos</a></li>
                         <li><a href="photos.html" data-key="photos">Photos</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -130,10 +132,10 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="gallery-hero">
-            <span class="section-tag">Audio Archive</span>
-            <h1 class="page-title">Selected Recordings</h1>
+            <span class="section-tag" data-key="audio-hero-tag">Audio Archive</span>
+            <h1 class="page-title" data-key="audio-page-title">Selected Recordings</h1>
             <div class="short-line"></div>
-            <p class="gallery-intro">
+            <p class="gallery-intro" data-key="audio-intro">
                 Listen to master audio cuts and live recordings from the Berlinisches Sinfonieorchester archive.
             </p>
         </section>
@@ -146,9 +148,9 @@
                 <div class="audio-track-header">
                     <div class="audio-play-badge"><i class="fa-solid fa-music"></i></div>
                     <div class="audio-track-info">
-                        <span class="media-tag">Live Recording | Konzerthaus Berlin</span>
-                        <h3 class="audio-title">Johannes Brahms: Symphony No. 1 in C minor, Op. 68 (IV. Adagio - Allegro non troppo)</h3>
-                        <p class="audio-artists">Conducted by Daniel Alejandro López | Berlinisches Sinfonieorchester</p>
+                        <span class="media-tag" data-key="audio-1-tag">Live Recording | Konzerthaus Berlin</span>
+                        <h3 class="audio-title" data-key="audio-1-title">Johannes Brahms: Symphony No. 1 in C minor, Op. 68 (IV. Adagio - Allegro non troppo)</h3>
+                        <p class="audio-artists" data-key="audio-1-artists">Conducted by Daniel Alejandro López | Berlinisches Sinfonieorchester</p>
                     </div>
                 </div>
                 <div class="audio-player-wrapper">
@@ -164,9 +166,9 @@
                 <div class="audio-track-header">
                     <div class="audio-play-badge"><i class="fa-solid fa-music"></i></div>
                     <div class="audio-track-info">
-                        <span class="media-tag">Chamber Recording | Berliner Philharmonie</span>
-                        <h3 class="audio-title">P. I. Tchaikovsky: Serenade for Strings in C major, Op. 48 (I. Pezzo in forma di sonatina)</h3>
-                        <p class="audio-artists">BSO String Ensemble | Live Concert Series</p>
+                        <span class="media-tag" data-key="audio-2-tag">Chamber Recording | Berliner Philharmonie</span>
+                        <h3 class="audio-title" data-key="audio-2-title">P. I. Tchaikovsky: Serenade for Strings in C major, Op. 48 (I. Pezzo in forma di sonatina)</h3>
+                        <p class="audio-artists" data-key="audio-2-artists">BSO String Ensemble | Live Concert Series</p>
                     </div>
                 </div>
                 <div class="audio-player-wrapper">
@@ -182,9 +184,9 @@
                 <div class="audio-track-header">
                     <div class="audio-play-badge"><i class="fa-solid fa-music"></i></div>
                     <div class="audio-track-info">
-                        <span class="media-tag">Inaugural Gala | Admiralspalast</span>
-                        <h3 class="audio-title">Gioachino Rossini: William Tell Overture (Finale)</h3>
-                        <p class="audio-artists">Conducted by Daniel Alejandro López | Berlinisches Sinfonieorchester</p>
+                        <span class="media-tag" data-key="audio-3-tag">Inaugural Gala | Admiralspalast</span>
+                        <h3 class="audio-title" data-key="audio-3-title">Gioachino Rossini: William Tell Overture (Finale)</h3>
+                        <p class="audio-artists" data-key="audio-3-artists">Conducted by Daniel Alejandro López | Berlinisches Sinfonieorchester</p>
                     </div>
                 </div>
                 <div class="audio-player-wrapper">
@@ -199,7 +201,9 @@
 
     </main>
 
-    <!-- FOOTER (Mismo estándar) -->
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
     <footer class="site-footer">
         <div class="footer-main">
             <div class="footer-left">
@@ -210,11 +214,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -227,10 +247,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

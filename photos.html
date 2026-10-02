@@ -10,7 +10,9 @@
 </head>
 <body>
 
-    <!-- HEADER (Mismo estándar) -->
+    <!-- =========================================
+         HEADER & NAVEGACIÓN
+         ========================================= -->
     <header class="main-header">
         <div class="header-left">
             <a href="index.html" class="logo-link">
@@ -35,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger">
-                        About us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -50,8 +52,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -63,8 +65,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger active-nav">
-                        Gallery
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -77,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -130,10 +132,10 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="gallery-hero">
-            <span class="section-tag">Visual Chronicle</span>
-            <h1 class="page-title">Photo Gallery</h1>
+            <span class="section-tag" data-key="photos-hero-tag">Visual Chronicle</span>
+            <h1 class="page-title" data-key="photos-page-title">Photo Gallery</h1>
             <div class="short-line"></div>
-            <p class="gallery-intro">
+            <p class="gallery-intro" data-key="photos-intro">
                 Photographic impressions from our concerts, rehearsals, and backstage moments in Berlin.
             </p>
         </section>
@@ -144,7 +146,7 @@
             <figure class="photo-item photo-wide">
                 <img src="images/orchestra.jpg" alt="Berlinisches Sinfonieorchester live performance">
                 <figcaption class="photo-caption">
-                    <span class="caption-title">Inaugural Gala Concert</span>
+                    <span class="caption-title" data-key="photos-p1-title">Inaugural Gala Concert</span>
                     <span class="caption-venue">Admiralspalast Berlin</span>
                 </figcaption>
             </figure>
@@ -152,7 +154,7 @@
             <figure class="photo-item">
                 <img src="images/orchestra-about-us.jpg" alt="Music Director Daniel Alejandro López conducting">
                 <figcaption class="photo-caption">
-                    <span class="caption-title">Dress Rehearsal Focus</span>
+                    <span class="caption-title" data-key="photos-p2-title">Dress Rehearsal Focus</span>
                     <span class="caption-venue">Konzerthaus Berlin</span>
                 </figcaption>
             </figure>
@@ -160,7 +162,7 @@
             <figure class="photo-item">
                 <img src="images/orchestra-mission.jpg" alt="Violin section during symphonic performance">
                 <figcaption class="photo-caption">
-                    <span class="caption-title">String Section in Unity</span>
+                    <span class="caption-title" data-key="photos-p3-title">String Section in Unity</span>
                     <span class="caption-venue">Berliner Philharmonie</span>
                 </figcaption>
             </figure>
@@ -168,16 +170,16 @@
             <figure class="photo-item">
                 <img src="images/orchestra.jpg" alt="Backstage moment before the concert">
                 <figcaption class="photo-caption">
-                    <span class="caption-title">Backstage Preparation</span>
-                    <span class="caption-venue">Soloists & Concertmaster</span>
+                    <span class="caption-title" data-key="photos-p4-title">Backstage Preparation</span>
+                    <span class="caption-venue" data-key="photos-p4-venue">Soloists & Concertmaster</span>
                 </figcaption>
             </figure>
 
             <figure class="photo-item photo-wide">
                 <img src="images/orchestra-about-us.jpg" alt="Full orchestra applause with conductor">
                 <figcaption class="photo-caption">
-                    <span class="caption-title">Standing Ovation</span>
-                    <span class="caption-venue">Season Finale | Konzerthaus Berlin</span>
+                    <span class="caption-title" data-key="photos-p5-title">Standing Ovation</span>
+                    <span class="caption-venue" data-key="photos-p5-venue">Season Finale | Konzerthaus Berlin</span>
                 </figcaption>
             </figure>
 
@@ -192,7 +194,9 @@
         <div class="lightbox-caption-text" id="lightboxCaption"></div>
     </div>
 
-    <!-- FOOTER (Mismo estándar) -->
+    <!-- =========================================
+         FOOTER & SUB-FOOTER
+         ========================================= -->
     <footer class="site-footer">
         <div class="footer-main">
             <div class="footer-left">
@@ -203,11 +207,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -220,10 +240,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

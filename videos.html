@@ -37,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger">
-                        About us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -52,8 +52,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -65,8 +65,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger active-nav">
-                        Gallery
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -132,10 +132,10 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="gallery-hero">
-            <span class="section-tag">Audio-Visual Archive</span>
-            <h1 class="page-title">Video Highlights</h1>
+            <span class="section-tag" data-key="videos-hero-tag">Audio-Visual Archive</span>
+            <h1 class="page-title" data-key="videos-page-title">Video Highlights</h1>
             <div class="short-line"></div>
-            <p class="gallery-intro">
+            <p class="gallery-intro" data-key="videos-intro">
                 Live performance recordings, behind-the-scenes documentaries, and concert highlights of the Berlinisches Sinfonieorchester in Berlin.
             </p>
         </section>
@@ -146,48 +146,48 @@
             <!-- VIDEO 1 (DESTACADO / GRANDE) -->
             <article class="video-card video-card-featured">
                 <div class="video-embed-container">
-                    <iframe src="https://youtu.be/aQka-sAsh7o?si=FWTwiGHF04LOKuLH" title="Schubert: Symphony no. 8 in B minor, “Unfinished” - BSO Gala" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/aQka-sAsh7o" title="Schubert: Symphony no. 8 in B minor, “Unfinished” - BSO Gala" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <span class="media-tag">Featured Recording | Admiralspalast</span>
-                    <h2 class="video-title">Schubert: Symphony no. 8 in B minor, “Unfinished”. (I. Allegro moderato)</h2>
-                    <p class="video-meta">Conducted by Daniel Alejandro López | Inaugural Season Gala</p>
+                    <span class="media-tag" data-key="videos-v1-tag">Featured Recording | Admiralspalast</span>
+                    <h2 class="video-title" data-key="videos-v1-title">Schubert: Symphony no. 8 in B minor, “Unfinished”. (I. Allegro moderato)</h2>
+                    <p class="video-meta" data-key="videos-v1-meta">Conducted by Daniel Alejandro López | Inaugural Season Gala</p>
                 </div>
             </article>
 
             <!-- VIDEO 2 -->
             <article class="video-card">
                 <div class="video-embed-container">
-                    <iframe src="https://www.youtube.com/watch?v=wSi86MeFQDc" title="Beethoven: 3rd Symphony, Eroica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/wSi86MeFQDc" title="Beethoven: 3rd Symphony, Eroica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <span class="media-tag">Konzerthaus Berlin</span>
-                    <h3 class="video-title">Beethoven: 3rd Symphony, Eroica. (I. Allegro con brio)</h3>
-                    <p class="video-meta">Live Performance Excerpt | May 2025</p>
+                    <span class="media-tag" data-key="videos-v2-tag">Konzerthaus Berlin</span>
+                    <h3 class="video-title" data-key="videos-v2-title">Beethoven: 3rd Symphony, Eroica. (I. Allegro con brio)</h3>
+                    <p class="video-meta" data-key="videos-v2-meta">Live Performance Excerpt | May 2025</p>
                 </div>
             </article>
 
             <!-- VIDEO 3 -->
             <article class="video-card">
                 <div class="video-embed-container">
-                    <iframe src="https://www.youtube.com/watch?v=biWhi4Gb-UM" title="E. Castellanos: El río de las siete estrellas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/biWhi4Gb-UM" title="E. Castellanos: El río de las siete estrellas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <span class="media-tag">Berliner Philharmonie</span>
-                    <h3 class="video-title">E. Castellanos: El río de las siete estrellas</h3>
-                    <p class="video-meta">Concert | March 2025</p>
+                    <span class="media-tag" data-key="videos-v3-tag">Berliner Philharmonie</span>
+                    <h3 class="video-title" data-key="videos-v3-title">E. Castellanos: El río de las siete estrellas</h3>
+                    <p class="video-meta" data-key="videos-v3-meta">Concert | March 2025</p>
                 </div>
             </article>
 
             <!-- VIDEO 4 -->
             <article class="video-card">
                 <div class="video-embed-container">
-                    <iframe src="https://www.youtube.com/watch?v=4qGNcXJLgXQ&t=745s" title="Rehearsal Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/4qGNcXJLgXQ?start=745" title="Rehearsal Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <span class="media-tag">Documentary</span>
-                    <h3 class="video-title">The Making of an Independent Orchestra in Berlin</h3>
-                    <p class="video-meta">Behind the scenes & rehearsal insights with Music Director Daniel Alejandro López</p>
+                    <span class="media-tag" data-key="videos-v4-tag">Documentary</span>
+                    <h3 class="video-title" data-key="videos-v4-title">The Making of an Independent Orchestra in Berlin</h3>
+                    <p class="video-meta" data-key="videos-v4-meta">Behind the scenes & rehearsal insights with Music Director Daniel Alejandro López</p>
                 </div>
             </article>
 
@@ -208,11 +208,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -225,10 +241,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

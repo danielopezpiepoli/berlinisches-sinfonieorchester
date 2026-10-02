@@ -37,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger">
-                        About us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -52,21 +52,21 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
                     <ul class="dropdown-content">
                         <li><a href="program.html" data-key="upcoming">Upcoming events</a></li>
-                        <li><a href="past-concerts.html" class="active-nav" data-key="past">Past concerts</a></li>
+                        <li><a href="past-concerts.html" class="active-subnav" data-key="past">Past concerts</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger">
-                        Gallery
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -132,19 +132,19 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="program-hero">
-            <span class="section-tag">Archive & Retrospective</span>
-            <h1 class="page-title">Past Concerts</h1>
+            <span class="section-tag" data-key="past-hero-tag">Archive & Retrospective</span>
+            <h1 class="page-title" data-key="past-page-title">Past Concerts</h1>
             <div class="short-line"></div>
-            <p class="program-intro">
+            <p class="program-intro" data-key="past-intro">
                 A chronicle of previous symphonic seasons, orchestral milestones, and archival recordings performed across Berlin's cultural halls.
             </p>
         </section>
 
         <!-- 2. FILTRO POR TEMPORADA -->
         <section class="program-filter-bar">
-            <button class="filter-btn active" data-filter="all">All Seasons</button>
-            <button class="filter-btn" data-filter="season-25-26">Season 2025/2026</button>
-            <button class="filter-btn" data-filter="season-24-25">Inaugural Season 2024/2025</button>
+            <button class="filter-btn active" data-filter="all" data-key="past-filter-all">All Seasons</button>
+            <button class="filter-btn" data-filter="season-25-26" data-key="past-filter-25-26">Season 2025/2026</button>
+            <button class="filter-btn" data-filter="season-24-25" data-key="past-filter-24-25">Inaugural Season 2024/2025</button>
         </section>
 
         <!-- 3. LISTA DE CONCIERTOS PASADOS -->
@@ -153,37 +153,37 @@
             <!-- EVENTO PASADO 1 -->
             <article class="concert-card past-card" data-category="season-25-26">
                 <div class="concert-date-badge">
-                    <span class="concert-month">MAY</span>
+                    <span class="concert-month" data-key="past-e1-month">MAY</span>
                     <span class="concert-day">16</span>
                     <span class="concert-year">2026</span>
                 </div>
 
                 <div class="concert-details">
                     <div class="concert-meta">
-                        <span class="meta-tag">Romantic Repertoire</span>
+                        <span class="meta-tag" data-key="past-e1-tag">Romantic Repertoire</span>
                         <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Konzerthaus Berlin | Großer Saal</span>
                     </div>
 
-                    <h2 class="concert-title">Brahms: Symphony No. 1 in C minor & Academic Festival Overture</h2>
+                    <h2 class="concert-title" data-key="past-e1-title">Brahms: Symphony No. 1 in C minor & Academic Festival Overture</h2>
                     
                     <div class="concert-program-works">
-                        <p><strong>J. Brahms:</strong> <em>Academic Festival Overture</em>, Op. 80</p>
-                        <p><strong>J. Brahms:</strong> <em>Symphony No. 1 in C minor</em>, Op. 68</p>
+                        <p data-key="past-e1-w1"><strong>J. Brahms:</strong> <em>Academic Festival Overture</em>, Op. 80</p>
+                        <p data-key="past-e1-w2"><strong>J. Brahms:</strong> <em>Symphony No. 1 in C minor</em>, Op. 68</p>
                     </div>
 
                     <div class="concert-artists">
-                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
-                        <span><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
+                        <span data-key="past-e1-conductor"><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span data-key="past-e1-orchestra"><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
                     </div>
                 </div>
 
                 <div class="concert-action-panel past-action-panel">
-                    <span class="ticket-status status-archived">Archived Performance</span>
+                    <span class="ticket-status status-archived" data-key="past-badge-archived">Archived Performance</span>
                     <div class="past-links-group">
-                        <a href="videos.html" class="btn-highlight-link">
+                        <a href="videos.html" class="btn-highlight-link" data-key="past-btn-watch">
                             <i class="fa-solid fa-play"></i> Watch Highlights
                         </a>
-                        <a href="photos.html" class="btn-highlight-ghost">
+                        <a href="photos.html" class="btn-highlight-ghost" data-key="past-btn-gallery">
                             <i class="fa-regular fa-image"></i> Photo Gallery
                         </a>
                     </div>
@@ -193,37 +193,37 @@
             <!-- EVENTO PASADO 2 -->
             <article class="concert-card past-card" data-category="season-25-26">
                 <div class="concert-date-badge">
-                    <span class="concert-month">FEB</span>
+                    <span class="concert-month" data-key="past-e2-month">FEB</span>
                     <span class="concert-day">08</span>
                     <span class="concert-year">2026</span>
                 </div>
 
                 <div class="concert-details">
                     <div class="concert-meta">
-                        <span class="meta-tag">Winter Gala</span>
+                        <span class="meta-tag" data-key="past-e2-tag">Winter Gala</span>
                         <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Berliner Philharmonie | Kammermusiksaal</span>
                     </div>
 
-                    <h2 class="concert-title">Mozart & Tchaikovsky: Serenades for Strings</h2>
+                    <h2 class="concert-title" data-key="past-e2-title">Mozart & Tchaikovsky: Serenades for Strings</h2>
                     
                     <div class="concert-program-works">
-                        <p><strong>W. A. Mozart:</strong> <em>Serenade No. 13 in G major</em>, K. 525 "Eine kleine Nachtmusik"</p>
-                        <p><strong>P. I. Tchaikovsky:</strong> <em>Serenade for Strings in C major</em>, Op. 48</p>
+                        <p data-key="past-e2-w1"><strong>W. A. Mozart:</strong> <em>Serenade No. 13 in G major</em>, K. 525 "Eine kleine Nachtmusik"</p>
+                        <p data-key="past-e2-w2"><strong>P. I. Tchaikovsky:</strong> <em>Serenade for Strings in C major</em>, Op. 48</p>
                     </div>
 
                     <div class="concert-artists">
-                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
-                        <span><strong>Ensemble:</strong> String Soloists of BSO</span>
+                        <span data-key="past-e2-conductor"><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span data-key="past-e2-ensemble"><strong>Ensemble:</strong> String Soloists of BSO</span>
                     </div>
                 </div>
 
                 <div class="concert-action-panel past-action-panel">
-                    <span class="ticket-status status-archived">Archived Performance</span>
+                    <span class="ticket-status status-archived" data-key="past-badge-archived">Archived Performance</span>
                     <div class="past-links-group">
-                        <a href="audios.html" class="btn-highlight-link">
+                        <a href="audios.html" class="btn-highlight-link" data-key="past-btn-listen">
                             <i class="fa-solid fa-headphones"></i> Listen Audio
                         </a>
-                        <a href="photos.html" class="btn-highlight-ghost">
+                        <a href="photos.html" class="btn-highlight-ghost" data-key="past-btn-gallery">
                             <i class="fa-regular fa-image"></i> Photo Gallery
                         </a>
                     </div>
@@ -233,37 +233,37 @@
             <!-- EVENTO PASADO 3 (INAUGURAL) -->
             <article class="concert-card past-card" data-category="season-24-25">
                 <div class="concert-date-badge">
-                    <span class="concert-month">NOV</span>
+                    <span class="concert-month" data-key="past-e3-month">NOV</span>
                     <span class="concert-day">29</span>
                     <span class="concert-year">2025</span>
                 </div>
 
                 <div class="concert-details">
                     <div class="concert-meta">
-                        <span class="meta-tag">Inaugural Concert</span>
+                        <span class="meta-tag" data-key="past-e3-tag">Inaugural Concert</span>
                         <span class="meta-hall"><i class="fa-solid fa-location-dot"></i> Admiralspalast Berlin</span>
                     </div>
 
-                    <h2 class="concert-title">Inaugural Gala: Dvořák Symphony No. 9 "From the New World"</h2>
+                    <h2 class="concert-title" data-key="past-e3-title">Inaugural Gala: Dvořák Symphony No. 9 "From the New World"</h2>
                     
                     <div class="concert-program-works">
-                        <p><strong>G. Rossini:</strong> <em>William Tell Overture</em></p>
-                        <p><strong>A. Dvořák:</strong> <em>Symphony No. 9 in E minor</em>, Op. 95 "From the New World"</p>
+                        <p data-key="past-e3-w1"><strong>G. Rossini:</strong> <em>William Tell Overture</em></p>
+                        <p data-key="past-e3-w2"><strong>A. Dvořák:</strong> <em>Symphony No. 9 in E minor</em>, Op. 95 "From the New World"</p>
                     </div>
 
                     <div class="concert-artists">
-                        <span><strong>Conductor:</strong> Daniel Alejandro López</span>
-                        <span><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
+                        <span data-key="past-e3-conductor"><strong>Conductor:</strong> Daniel Alejandro López</span>
+                        <span data-key="past-e3-orchestra"><strong>Orchestra:</strong> Berlinisches Sinfonieorchester</span>
                     </div>
                 </div>
 
                 <div class="concert-action-panel past-action-panel">
-                    <span class="ticket-status status-archived">Milestone Event</span>
+                    <span class="ticket-status status-archived" data-key="past-badge-milestone">Milestone Event</span>
                     <div class="past-links-group">
-                        <a href="videos.html" class="btn-highlight-link">
+                        <a href="videos.html" class="btn-highlight-link" data-key="past-btn-watch">
                             <i class="fa-solid fa-play"></i> Watch Full Gala
                         </a>
-                        <a href="photos.html" class="btn-highlight-ghost">
+                        <a href="photos.html" class="btn-highlight-ghost" data-key="past-btn-gallery">
                             <i class="fa-regular fa-image"></i> Photo Gallery
                         </a>
                     </div>
@@ -275,10 +275,10 @@
         <!-- 4. PUENTE A LA TEMPORADA ACTUAL -->
         <section class="program-patron-banner">
             <div class="banner-content">
-                <span class="banner-tag">Live Experience</span>
-                <h3>Experience Our Current Concert Season</h3>
-                <p>Join us live in Berlin's iconic concert halls for the upcoming symphonic masterpieces of Season 2026.</p>
-                <a href="program.html" class="btn-ghost">View Upcoming Events &rarr;</a>
+                <span class="banner-tag" data-key="past-banner-tag">Live Experience</span>
+                <h3 data-key="past-banner-title">Experience Our Current Concert Season</h3>
+                <p data-key="past-banner-desc">Join us live in Berlin's iconic concert halls for the upcoming symphonic masterpieces of Season 2026.</p>
+                <a href="program.html" class="btn-ghost" data-key="past-banner-btn">View Upcoming Events &rarr;</a>
             </div>
         </section>
 
@@ -297,11 +297,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -314,10 +330,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

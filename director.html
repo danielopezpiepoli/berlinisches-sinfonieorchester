@@ -37,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger active-nav">
-                        About us 
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -52,8 +52,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -65,8 +65,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger">
-                        Gallery
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -132,9 +132,9 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="director-hero">
-            <span class="section-tag">Artistic Leadership</span>
+            <span class="section-tag" data-key="director-hero-tag">Artistic Leadership</span>
             <h1 class="page-title">Daniel López Piepoli</h1>
-            <div class="director-subtitle">Music Director & Founder</div>
+            <div class="director-subtitle" data-key="director-hero-subtitle">Music Director & Founder</div>
             <div class="short-line"></div>
         </section>
 
@@ -150,12 +150,12 @@
                     </div>
 
                     <div class="director-intro-text">
-                        <span class="intro-kicker">Biography</span>
-                        <h2>An Innate Communicator with Contagious Charisma</h2>
-                        <p class="lead-bio">
+                        <span class="intro-kicker" data-key="director-kicker">Biography</span>
+                        <h2 data-key="director-title">An Innate Communicator with Contagious Charisma</h2>
+                        <p class="lead-bio" data-key="director-lead-bio">
                             <strong>Daniel López Piepoli</strong> (Venezuela, 1996) is an Italian-Venezuelan conductor currently based in Berlin, Germany. He trained as a Conductor in his native country, Venezuela, in <em>El Sistema</em>, the music education program initiated by maestro José Antonio Abreu. Besides his enthusiastic artistic vision and academic preparation, he has a natural affinity for languages (conversational in English, Spanish, Italian, Portuguese, and French).
                         </p>
-                        <p>
+                        <p data-key="director-bio-p1">
                             Daniel’s artistry is portrayed by remarkable vivacity, sensitivity, and enthusiasm, which led him to win the <strong>3rd Prize in the New York Classical Music Competition (USA)</strong>, to be <strong>semi-finalist in the 2nd Italian International Conducting Competition in Bordighera (Italy)</strong> and <strong>finalist in the International Artists Competition (Austria)</strong> in 2023, year in which he made his debut in Italy with the Youth Strings Orchestra “Note Libere” of Sanremo.
                         </p>
                     </div>
@@ -164,42 +164,39 @@
                 <!-- BLOQUE 2: FOTO HORIZONTAL EN ACCIÓN DIRIGIENDO (ACTION SHOT) -->
                 <figure class="director-action-figure">
                     <img src="assets/images/daniel-lopez-piepoli-conducting.JPG" alt="Daniel López Piepoli conducting Berlinisches Sinfonieorchester" onerror="this.src='https://via.placeholder.com/1200x550?text=Daniel+L%C3%B3pez+Conducting+Orchestra'">
-                    <!--<figcaption class="action-caption">
-                        <span>Daniel López Piepoli in rehearsal with the Berlinisches Sinfonieorchester</span>
-                    </figcaption>-->
                 </figure>
 
                 <!-- BLOQUE 3: TEXTO DE FORMACIÓN Y TRAYECTORIA -->
                 <div class="director-extended-bio">
                     <div class="bio-columns-text">
-                        <p>
+                        <p data-key="director-bio-p2">
                             In the same year, he participated in the 5th BMI International Conducting Competition with the Bucharest Symphony (Romania) and in the inaugural edition of the “Borislav Ivanov” International Competition for Young Conductors with the Varna State Opera (Bulgaria) as the only Latin American and representative of the American continent selected. Recently, in 2024, he was guest conductor of the <em>Anima Orchestre et Art Lyrique</em> in Paris (France).
                         </p>
-                        <p>
+                        <p data-key="director-bio-p3">
                             Daniel started studying Orchestral Conducting with Ramón Moncada and Alexander Gómez, later continuing under the guidance of maestro and composer Alfredo Rugeles (former Artistic Director of the Simón Bolívar Symphony) in the National Experimental University of Arts in Caracas for the Bachelor in conducting, and Maestra Teresa Hernández (National Director of the Integral Chair of Orchestra Conducting and currently representative of El Sistema in Spain). He attended masterclasses with Dick Van Gasteren, Miguel Ángel Monroy, Alfredo Ascanio, Eddy Marcano, Régulo Stabilito, and David Cubek.
                         </p>
 
                         <div class="bio-quote-block">
-                            <p>«An orchestra is not merely an ensemble of instruments; it is a collective pulse where discipline, joy, and deep human connection converge into sound.»</p>
+                            <p data-key="director-quote">«An orchestra is not merely an ensemble of instruments; it is a collective pulse where discipline, joy, and deep human connection converge into sound.»</p>
                         </div>
 
-                        <p>
+                        <p data-key="director-bio-p4">
                             As musical director, Daniel was regularly invited to conduct several orchestras in his country, such as Falcón Regional Youth Symphony, Youth Symphony Orchestra of the Music Conservatory Simón Bolívar, La Victoria Youth Symphony, San Sebastián de los Reyes Youth Symphony, Ciudad Guayana Youth Symphony, and San Antonio de Los Altos Youth Symphony, eventually being appointed as Musical Director of INOF Symphony in Los Teques, Musical Conductor in charge of the Children and Youth Symphony Orchestras of Coro, and Assistant Conductor of the Regional del Este Youth Symphony in Caracas.
                         </p>
-                        <p>
+                        <p data-key="director-bio-p5">
                             Strongly influenced by his own remarkable education as part of El Sistema, Daniel has begun a community project of a symphony orchestra in Berlin (Germany), mostly formed by immigrants and refugees, based on his own trajectory as trombone player, lyrical singer, and arranger. He studied trombone in the Latin American Academy of Trombones in Caracas, participated in several festivals dictated by the Simón Bolívar Symphony Orchestra of Venezuela and was an active member of the Youth Symphony Orchestras of Coro, Falcón, Chacao, Youth Symphony Orchestra of the Music Conservatory Simón Bolívar, Falcón Brass Ensemble, and the Central University of Venezuela Symphony. Besides, he also studied International Relations in the Central University of Venezuela and is passionate about languages, having created a program to teach languages through the bases of Classical Music.
                         </p>
                     </div>
 
                     <!-- FOOTER DEL ARTÍCULO: ENLACES -->
                     <div class="director-bio-footer">
-                        <a href="https://danielopezpiepoli.com" target="_blank" rel="noopener noreferrer" class="link-official-site">
+                        <a href="https://danielopezpiepoli.com" target="_blank" rel="noopener noreferrer" class="link-official-site" data-key="director-link-website">
                             Visit Official Website: danielopezpiepoli.com &rarr;
                         </a>
 
                         <div class="director-nav-btns">
-                            <a href="project.html" class="btn-director-ghost">The Project & Vision</a>
-                            <a href="program.html" class="btn-director-gold">Season 2026 Concerts</a>
+                            <a href="project.html" class="btn-director-ghost" data-key="director-btn-project">The Project & Vision</a>
+                            <a href="program.html" class="btn-director-gold" data-key="director-btn-program">Season 2026 Concerts</a>
                         </div>
                     </div>
                 </div>
@@ -222,11 +219,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -239,10 +252,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

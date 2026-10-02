@@ -37,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger active-nav">
-                        About us 
+                    <a href="#" class="dropdown-trigger active-nav">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -52,8 +52,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -65,8 +65,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger">
-                        Gallery
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -132,20 +132,20 @@
 
         <!-- 1. HERO EDITORIAL -->
         <section class="musicians-hero">
-            <span class="section-tag">Orchestral Ensemble</span>
-            <h1 class="page-title">The Musicians</h1>
+            <span class="section-tag" data-key="musicians-hero-tag">Orchestral Ensemble</span>
+            <h1 class="page-title" data-key="musicians-page-title">The Musicians</h1>
             <div class="short-line"></div>
-            <p class="musicians-intro">
+            <p class="musicians-intro" data-key="musicians-intro">
                 Meet the international artists, section leaders, and orchestral players who bring the sound of the Berlinisches Sinfonieorchester to life across Berlin’s concert halls.
             </p>
         </section>
 
         <!-- 2. BARRA DE NAVEGACIÓN RÁPIDA (SECTION JUMP BAR) -->
         <nav class="sections-nav-bar">
-            <a href="#strings" class="section-jump-link">Strings</a>
-            <a href="#woodwinds" class="section-jump-link">Woodwinds</a>
-            <a href="#brass" class="section-jump-link">Brass</a>
-            <a href="#percussion" class="section-jump-link">Percussion</a>
+            <a href="#strings" class="section-jump-link" data-key="musicians-nav-strings">Strings</a>
+            <a href="#woodwinds" class="section-jump-link" data-key="musicians-nav-woodwinds">Woodwinds</a>
+            <a href="#brass" class="section-jump-link" data-key="musicians-nav-brass">Brass</a>
+            <a href="#percussion" class="section-jump-link" data-key="musicians-nav-percussion">Percussion</a>
         </nav>
 
         <!-- =========================================
@@ -153,81 +153,81 @@
              ========================================= -->
         <section class="instrument-family-block" id="strings">
             <div class="family-header">
-                <span class="family-tag">Section I</span>
-                <h2 class="family-title">Strings</h2>
+                <span class="family-tag" data-key="musicians-sec-strings-tag">Section I</span>
+                <h2 class="family-title" data-key="musicians-sec-strings-title">Strings</h2>
                 <div class="family-line"></div>
             </div>
 
             <!-- Sub-sección: First Violins -->
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">First Violins</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-violins1">First Violins</h3>
                 <div class="musicians-grid">
 
-                    <!-- Stella Karalis (Concertmaster) -->
+                    <!-- First Violin Principal 1 (Concertmaster) -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/stella-karalis-violin.jpg" alt="Stella Karalis - Concertmaster" onerror="this.src='https://via.placeholder.com/350x440?text=Stella+Karalis'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Section Leader</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vln1-p1-tag">Section Leader</span>
+                                <p class="overlay-bio" data-key="musicians-vln1-p1-bio">
                                     Concertmaster of the BSO. Renowned for her expressive phrasing, chamber leadership, and dedication to symphonic excellence in Berlin.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Stella Karalis</h4>
-                            <span class="musician-chair">Concertmaster</span>
+                            <span class="musician-chair" data-key="musicians-vln1-p1-chair">Concertmaster</span>
                         </div>
                     </article>
 
-                    <!-- Clara Schumann -->
+                    <!-- First Violin Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/violin-clara.jpg" alt="First Violin" onerror="this.src='https://via.placeholder.com/350x440?text=First+Violin'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Germany</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vln1-p2-tag">Germany</span>
+                                <p class="overlay-bio" data-key="musicians-vln1-p2-bio">
                                     Master of Music graduate specializing in romantic and classical orchestral repertoire.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Clara Schumann</h4>
-                            <span class="musician-chair">First Violin</span>
+                            <span class="musician-chair" data-key="musicians-vln1-p2-chair">First Violin</span>
                         </div>
                     </article>
 
-                    <!-- Felix Mendelssohn -->
+                    <!-- First Violin Position 3 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/violin-felix.jpg" alt="First Violin" onerror="this.src='https://via.placeholder.com/350x440?text=First+Violin'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Germany</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vln1-p3-tag">Germany</span>
+                                <p class="overlay-bio" data-key="musicians-vln1-p3-bio">
                                     Active chamber soloist and guest orchestral player across European festivals.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Felix Mendelssohn</h4>
-                            <span class="musician-chair">First Violin</span>
+                            <span class="musician-chair" data-key="musicians-vln1-p3-chair">First Violin</span>
                         </div>
                     </article>
 
-                    <!-- Johannes Brahms -->
+                    <!-- First Violin Position 4 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/violin-johannes.jpg" alt="First Violin" onerror="this.src='https://via.placeholder.com/350x440?text=First+Violin'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Austria</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vln1-p4-tag">Austria</span>
+                                <p class="overlay-bio" data-key="musicians-vln1-p4-bio">
                                     Specialized in large-scale symphonic works and chamber sonatas.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Johannes Brahms</h4>
-                            <span class="musician-chair">First Violin</span>
+                            <span class="musician-chair" data-key="musicians-vln1-p4-chair">First Violin</span>
                         </div>
                     </article>
 
@@ -236,57 +236,57 @@
 
             <!-- Sub-sección: Second Violins & Violas -->
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">Second Violins & Violas</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-violins2-violas">Second Violins & Violas</h3>
                 <div class="musicians-grid">
 
-                    <!-- Gabriel Fauré -->
+                    <!-- Second Violin Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/violin-gabriel.jpg" alt="Principal Second Violin" onerror="this.src='https://via.placeholder.com/350x440?text=Second+Violin'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vln2-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-vln2-p1-bio">
                                     Leading the second violin section with rhythmic drive and tonal balance.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Gabriel Fauré</h4>
-                            <span class="musician-chair">Principal Second Violin</span>
+                            <span class="musician-chair" data-key="musicians-vln2-p1-chair">Principal Second Violin</span>
                         </div>
                     </article>
 
-                    <!-- Nadia Boulanger -->
+                    <!-- Viola Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/viola-nadia.jpg" alt="Principal Viola" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Viola'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vla-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-vla-p1-bio">
                                     Rich middle-voice timbre and devoted pedagogue within Berlin's chamber ensembles.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Nadia Boulanger</h4>
-                            <span class="musician-chair">Principal Viola</span>
+                            <span class="musician-chair" data-key="musicians-vla-p1-chair">Principal Viola</span>
                         </div>
                     </article>
 
-                    <!-- Maurice Ravel -->
+                    <!-- Viola Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/viola-maurice.jpg" alt="Viola" onerror="this.src='https://via.placeholder.com/350x440?text=Viola'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">France</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vla-p2-tag">France</span>
+                                <p class="overlay-bio" data-key="musicians-vla-p2-bio">
                                     Orchestral violist focusing on modern color palettes and textural balance.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Maurice Ravel</h4>
-                            <span class="musician-chair">Viola</span>
+                            <span class="musician-chair" data-key="musicians-vla-p2-chair">Viola</span>
                         </div>
                     </article>
 
@@ -295,74 +295,74 @@
 
             <!-- Sub-sección: Violoncellos & Double Basses -->
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">Violoncellos & Double Basses</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-cellos-basses">Violoncellos & Double Basses</h3>
                 <div class="musicians-grid">
 
-                    <!-- Camille Saint-Saëns -->
+                    <!-- Cello Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/cello-camille.jpg" alt="Principal Cello" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Cello'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vc-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-vc-p1-bio">
                                     Celebrated soloist bringing lyricism and depth to the lower string core.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Camille Saint-Saëns</h4>
-                            <span class="musician-chair">Principal Cello</span>
+                            <span class="musician-chair" data-key="musicians-vc-p1-chair">Principal Cello</span>
                         </div>
                     </article>
 
-                    <!-- Antonín Dvořák -->
+                    <!-- Cello Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/cello-antonin.jpg" alt="Violoncello" onerror="this.src='https://via.placeholder.com/350x440?text=Violoncello'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Czechia</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-vc-p2-tag">Czechia</span>
+                                <p class="overlay-bio" data-key="musicians-vc-p2-bio">
                                     Ensemble cellist passionate about romantic orchestral sonorities and folk idioms.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Antonín Dvořák</h4>
-                            <span class="musician-chair">Violoncello</span>
+                            <span class="musician-chair" data-key="musicians-vc-p2-chair">Violoncello</span>
                         </div>
                     </article>
 
-                    <!-- Isabel Barciela (Principal Double Bass) -->
+                    <!-- Double Bass Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/isabel-barciela-bass.jpg" alt="Isabel Barciela - Principal Double Bass" onerror="this.src='https://via.placeholder.com/350x440?text=Isabel+Barciela'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Section Leader</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-cb-p1-tag">Section Leader</span>
+                                <p class="overlay-bio" data-key="musicians-cb-p1-bio">
                                     Principal Double Bass of BSO. Solid foundation and dynamic leadership at the heart of the orchestra's acoustic architecture.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Isabel Barciela</h4>
-                            <span class="musician-chair">Principal Double Bass</span>
+                            <span class="musician-chair" data-key="musicians-cb-p1-chair">Principal Double Bass</span>
                         </div>
                     </article>
 
-                    <!-- Franz Liszt -->
+                    <!-- Double Bass Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/bass-franz.jpg" alt="Double Bass" onerror="this.src='https://via.placeholder.com/350x440?text=Double+Bass'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Hungary</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-cb-p2-tag">Hungary</span>
+                                <p class="overlay-bio" data-key="musicians-cb-p2-bio">
                                     Powerful bass presence anchoring the lowest register of the symphonic body.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Franz Liszt</h4>
-                            <span class="musician-chair">Double Bass</span>
+                            <span class="musician-chair" data-key="musicians-cb-p2-chair">Double Bass</span>
                         </div>
                     </article>
 
@@ -375,64 +375,64 @@
              ========================================= -->
         <section class="instrument-family-block" id="woodwinds">
             <div class="family-header">
-                <span class="family-tag">Section II</span>
-                <h2 class="family-title">Woodwinds</h2>
+                <span class="family-tag" data-key="musicians-sec-woodwinds-tag">Section II</span>
+                <h2 class="family-title" data-key="musicians-sec-woodwinds-title">Woodwinds</h2>
                 <div class="family-line"></div>
             </div>
 
             <!-- Flautas & Oboes -->
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">Flutes & Oboes</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-flutes-oboes">Flutes & Oboes</h3>
                 <div class="musicians-grid">
 
-                    <!-- Ebru Algül (Principal Flute) -->
+                    <!-- Flute Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/ebru-algul-flute.jpg" alt="Ebru Algül - Principal Flute" onerror="this.src='https://via.placeholder.com/350x440?text=Ebru+Alg%C3%BCl'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Section Leader</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-fl-p1-tag">Section Leader</span>
+                                <p class="overlay-bio" data-key="musicians-fl-p1-bio">
                                     Principal Flute of BSO. Admired for her luminous tone, expressive agility, and versatile chamber presence in Berlin.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Ebru Algül</h4>
-                            <span class="musician-chair">Principal Flute</span>
+                            <span class="musician-chair" data-key="musicians-fl-p1-chair">Principal Flute</span>
                         </div>
                     </article>
 
-                    <!-- Claude Debussy -->
+                    <!-- Flute Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/flute-claude.jpg" alt="Flute" onerror="this.src='https://via.placeholder.com/350x440?text=Flute'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">France</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-fl-p2-tag">France</span>
+                                <p class="overlay-bio" data-key="musicians-fl-p2-bio">
                                     Specialized in impressionistic wind colours, piccolo, and contemporary orchestral works.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Claude Debussy</h4>
-                            <span class="musician-chair">Flute / Piccolo</span>
+                            <span class="musician-chair" data-key="musicians-fl-p2-chair">Flute / Piccolo</span>
                         </div>
                     </article>
 
-                    <!-- Robert Schumann -->
+                    <!-- Oboe Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/oboe-robert.jpg" alt="Principal Oboe" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Oboe'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-ob-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-ob-p1-bio">
                                     Warm, focused oboe sound and specialist in English horn orchestral solos.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Robert Schumann</h4>
-                            <span class="musician-chair">Principal Oboe</span>
+                            <span class="musician-chair" data-key="musicians-ob-p1-chair">Principal Oboe</span>
                         </div>
                     </article>
 
@@ -441,57 +441,57 @@
 
             <!-- Clarinetes & Fagotes -->
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">Clarinets & Bassoons</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-clarinets-bassoons">Clarinets & Bassoons</h3>
                 <div class="musicians-grid">
 
-                    <!-- Raphaëlle Courtay (Principal Clarinet) -->
+                    <!-- Clarinet Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/raphaelle-courtay-clarinet.jpg" alt="Raphaëlle Courtay - Principal Clarinet" onerror="this.src='https://via.placeholder.com/350x440?text=Rapha%C3%ABlle+Courtay'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Section Leader</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-cl-p1-tag">Section Leader</span>
+                                <p class="overlay-bio" data-key="musicians-cl-p1-bio">
                                     Principal Clarinet of BSO. Distinguished for velvety cantabile lines, virtuosic flexibility, and rich tone in symphonic concert programs.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Raphaëlle Courtay</h4>
-                            <span class="musician-chair">Principal Clarinet</span>
+                            <span class="musician-chair" data-key="musicians-cl-p1-chair">Principal Clarinet</span>
                         </div>
                     </article>
 
-                    <!-- Jean Sibelius -->
+                    <!-- Clarinet Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/clarinet-jean.jpg" alt="Clarinet" onerror="this.src='https://via.placeholder.com/350x440?text=Clarinet'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Finland</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-cl-p2-tag">Finland</span>
+                                <p class="overlay-bio" data-key="musicians-cl-p2-bio">
                                     Clarinet and Bass Clarinet player dedicated to Nordic and late-romantic textures.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Jean Sibelius</h4>
-                            <span class="musician-chair">Clarinet</span>
+                            <span class="musician-chair" data-key="musicians-cl-p2-chair">Clarinet</span>
                         </div>
                     </article>
 
-                    <!-- Béla Bartók -->
+                    <!-- Bassoon Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/bassoon-bela.jpg" alt="Principal Bassoon" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Bassoon'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-bn-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-bn-p1-bio">
                                     Master of the double reed, providing warm bassoon timbre and agile staccato clarity.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Béla Bartók</h4>
-                            <span class="musician-chair">Principal Bassoon</span>
+                            <span class="musician-chair" data-key="musicians-bn-p1-chair">Principal Bassoon</span>
                         </div>
                     </article>
 
@@ -504,80 +504,80 @@
              ========================================= -->
         <section class="instrument-family-block" id="brass">
             <div class="family-header">
-                <span class="family-tag">Section III</span>
-                <h2 class="family-title">Brass</h2>
+                <span class="family-tag" data-key="musicians-sec-brass-tag">Section III</span>
+                <h2 class="family-title" data-key="musicians-sec-brass-title">Brass</h2>
                 <div class="family-line"></div>
             </div>
 
             <div class="instrument-subgroup">
-                <h3 class="subgroup-title">French Horns, Trumpets, Trombones & Tuba</h3>
+                <h3 class="subgroup-title" data-key="musicians-sub-brass-all">French Horns, Trumpets, Trombones & Tuba</h3>
                 <div class="musicians-grid">
 
-                    <!-- Gustav Mahler -->
+                    <!-- Horn Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/horn-gustav.jpg" alt="Principal Horn" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Horn'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-hn-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-hn-p1-bio">
                                     Noble horn sound delivering heroic fanfares and tender chamber solos with equal mastery.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Gustav Mahler</h4>
-                            <span class="musician-chair">Principal Horn</span>
+                            <span class="musician-chair" data-key="musicians-hn-p1-chair">Principal Horn</span>
                         </div>
                     </article>
 
-                    <!-- Richard Strauss -->
+                    <!-- Trumpet Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/trumpet-richard.jpg" alt="Principal Trumpet" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Trumpet'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-tpt-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-tpt-p1-bio">
                                     Crisp articulation and ringing high register across classical and modern overtures.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Richard Strauss</h4>
-                            <span class="musician-chair">Principal Trumpet</span>
+                            <span class="musician-chair" data-key="musicians-tpt-p1-chair">Principal Trumpet</span>
                         </div>
                     </article>
 
-                    <!-- Hector Berlioz -->
+                    <!-- Trombone Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/trombone-hector.jpg" alt="Principal Trombone" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Trombone'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-tbn-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-tbn-p1-bio">
                                     Rich orchestral low-brass presence with wide dynamic range and cantabile legato.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Hector Berlioz</h4>
-                            <span class="musician-chair">Principal Trombone</span>
+                            <span class="musician-chair" data-key="musicians-tbn-p1-chair">Principal Trombone</span>
                         </div>
                     </article>
 
-                    <!-- Modest Mussorgsky -->
+                    <!-- Tuba Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/tuba-modest.jpg" alt="Tuba" onerror="this.src='https://via.placeholder.com/350x440?text=Tuba'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-tba-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-tba-p1-bio">
                                     Resonant symphonic tuba anchor, providing immense acoustic foundation to the brass choir.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Modest Mussorgsky</h4>
-                            <span class="musician-chair">Principal Tuba</span>
+                            <span class="musician-chair" data-key="musicians-tba-p1-chair">Principal Tuba</span>
                         </div>
                     </article>
 
@@ -590,45 +590,45 @@
              ========================================= -->
         <section class="instrument-family-block" id="percussion">
             <div class="family-header">
-                <span class="family-tag">Section IV</span>
-                <h2 class="family-title">Percussion & Timpani</h2>
+                <span class="family-tag" data-key="musicians-sec-percussion-tag">Section IV</span>
+                <h2 class="family-title" data-key="musicians-sec-percussion-title">Percussion & Timpani</h2>
                 <div class="family-line"></div>
             </div>
 
             <div class="instrument-subgroup">
                 <div class="musicians-grid">
 
-                    <!-- Igor Stravinsky -->
+                    <!-- Timpani Principal 1 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/timpani-igor.jpg" alt="Principal Timpani" onerror="this.src='https://via.placeholder.com/350x440?text=Principal+Timpani'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Principal Chair</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-timp-p1-tag">Principal Chair</span>
+                                <p class="overlay-bio" data-key="musicians-timp-p1-bio">
                                     Pivotal orchestral motor commanding rhythmic intensity and dramatic dynamic drive from the timpanist throne.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Igor Stravinsky</h4>
-                            <span class="musician-chair">Principal Timpani</span>
+                            <span class="musician-chair" data-key="musicians-timp-p1-chair">Principal Timpani</span>
                         </div>
                     </article>
 
-                    <!-- Sergei Prokofiev -->
+                    <!-- Percussion Position 2 -->
                     <article class="musician-card">
                         <div class="musician-photo-wrap">
                             <img src="images/musicians/percussion-sergei.jpg" alt="Percussion" onerror="this.src='https://via.placeholder.com/350x440?text=Percussion'">
                             <div class="musician-hover-overlay">
-                                <span class="overlay-origin">Ukraine / Germany</span>
-                                <p class="overlay-bio">
+                                <span class="overlay-origin" data-key="musicians-perc-p2-tag">Ukraine / Germany</span>
+                                <p class="overlay-bio" data-key="musicians-perc-p2-bio">
                                     Multi-percussionist adept at snare, cymbals, bass drum, and melodic mallet instruments.
                                 </p>
                             </div>
                         </div>
                         <div class="musician-caption">
                             <h4 class="musician-name">Sergei Prokofiev</h4>
-                            <span class="musician-chair">Percussion</span>
+                            <span class="musician-chair" data-key="musicians-perc-p2-chair">Percussion</span>
                         </div>
                     </article>
 
@@ -639,12 +639,12 @@
         <!-- 3. BANNER DE AUDICIONES (JOIN THE ORCHESTRA) -->
         <section class="musicians-audition-strip">
             <div class="audition-content">
-                <span class="audition-tag">Auditions & Roster</span>
-                <h3>Play With Berlinisches Sinfonieorchester</h3>
-                <p>
+                <span class="audition-tag" data-key="musicians-audition-tag">Auditions & Roster</span>
+                <h3 data-key="musicians-audition-title">Play With Berlinisches Sinfonieorchester</h3>
+                <p data-key="musicians-audition-desc">
                     Are you an accomplished instrumentalist living in or visiting Berlin? We continually hold video auditions and project-based calls for string, wind, brass, and percussion players.
                 </p>
-                <a href="contact.html?topic=join" class="btn-tier btn-tier-featured">Join the Orchestra &rarr;</a>
+                <a href="contact.html?topic=join" class="btn-tier btn-tier-featured" data-key="musicians-audition-btn">Join the Orchestra &rarr;</a>
             </div>
         </section>
 
@@ -663,11 +663,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -680,10 +696,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>

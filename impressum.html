@@ -37,8 +37,8 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" data-key="about" class="dropdown-trigger">
-                        About us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -52,8 +52,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="calendar" class="dropdown-trigger">
-                        Calendar 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="calendar">Calendar</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -65,8 +65,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="gallery" class="dropdown-trigger">
-                        Gallery
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="gallery">Gallery</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,8 +79,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" data-key="support" class="dropdown-trigger">
-                        Support us 
+                    <a href="#" class="dropdown-trigger">
+                        <span data-key="support">Support us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -131,10 +131,10 @@
     <main class="legal-page">
 
         <section class="legal-hero">
-            <span class="section-tag">Statutory Information</span>
-            <h1 class="page-title">Impressum / Legal Notice</h1>
+            <span class="section-tag" data-key="impressum-hero-tag">Statutory Information</span>
+            <h1 class="page-title" data-key="impressum-page-title">Impressum / Legal Notice</h1>
             <div class="short-line"></div>
-            <p class="legal-sub-intro">
+            <p class="legal-sub-intro" data-key="impressum-sub-intro">
                 Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / Information pursuant to § 5 DDG.
             </p>
         </section>
@@ -143,24 +143,24 @@
 
             <!-- 1. IDENTIFICACIÓN DE LA ASOCIACIÓN -->
             <section class="legal-block">
-                <h2>1. Entity / Betreiber der Website</h2>
+                <h2 data-key="impressum-sec1-title">1. Entity / Betreiber der Website</h2>
                 <div class="legal-entity-box">
                     <p><strong>Berlinisches Sinfonieorchester e. V.</strong></p>
-                    <p>Eingetragener Verein (e. V.) nach deutschem Recht</p>
-                    <p><strong>Registergericht:</strong> Amtsgericht Charlottenburg (Berlin)</p>
-                    <p><strong>Registernummer:</strong> VR 42493 B
-                        <a href="https://www.handelsregister.de/rp_web/sucheErgebnisse/welcome.xhtml?cid=1" target="_blank" rel="noopener noreferrer" class="legal-verify-link">
+                    <p data-key="impressum-sec1-legal-form">Eingetragener Verein (e. V.) nach deutschem Recht</p>
+                    <p><strong data-key="impressum-sec1-court">Registergericht:</strong> Amtsgericht Charlottenburg (Berlin)</p>
+                    <p><strong data-key="impressum-sec1-reg-nr">Registernummer:</strong> VR 42493 B
+                        <a href="https://www.handelsregister.de/rp_web/sucheErgebnisse/welcome.xhtml?cid=1" target="_blank" rel="noopener noreferrer" class="legal-verify-link" data-key="impressum-sec1-verify">
                             [Amtlich verifizieren / Verify at Registerportal &rarr;]
                         </a>
                     </p>
-                    <p><strong>Sitz des Vereins:</strong> Berlin, Deutschland</p>
-                    <p><strong>Steuernummer (Finanzamt für Körperschaften I, Berlin):</strong> 27/648/0000 0000 0000 0073 9</p>
+                    <p><strong data-key="impressum-sec1-seat">Sitz des Vereins:</strong> Berlin, Deutschland</p>
+                    <p><strong data-key="impressum-sec1-tax">Steuernummer (Finanzamt für Körperschaften I, Berlin):</strong> 27/648/0000 0000 0000 0073 9</p>
                 </div>
             </section>
 
             <!-- 2. DIRECCIÓN Y CONTACTO -->
             <section class="legal-block">
-                <h2>2. Postal Address & Direct Contact / Anschrift & Kontakt</h2>
+                <h2 data-key="impressum-sec2-title">2. Postal Address & Direct Contact / Anschrift & Kontakt</h2>
                 <p>
                     Berlinisches Sinfonieorchester e. V.<br>
                     Weißenburger Straße 18<br>
@@ -176,18 +176,18 @@
 
             <!-- 3. REPRESENTACIÓN LEGAL (§ 26 BGB) -->
             <section class="legal-block">
-                <h2>3. Authorized Representation / Vertretungsberechtigter Vorstand (§ 26 BGB)</h2>
-                <p>Der Verein wird gerichtlich und außergerichtlich durch den geschäftsführenden Vorstand vertreten (jeweils mit Einzelvertretungsmacht gemäß Satzung):</p>
+                <h2 data-key="impressum-sec3-title">3. Authorized Representation / Vertretungsberechtigter Vorstand (§ 26 BGB)</h2>
+                <p data-key="impressum-sec3-desc">Der Verein wird gerichtlich und außergerichtlich durch den geschäftsführenden Vorstand vertreten (jeweils mit Einzelvertretungsmacht gemäß Satzung):</p>
                 <ul>
-                    <li><strong>Daniel Alejandro López</strong> (Vorsitzender / President)</li>
-                    <li><strong>Gabriela Jose González López</strong> (Schatzmeisterin / Treasurer)</li>
+                    <li><strong>Daniel Alejandro López</strong> <span data-key="impressum-sec3-daniel-role">(Vorsitzender / President)</span></li>
+                    <li><strong>Gabriela Jose González López</strong> <span data-key="impressum-sec3-gabriela-role">(Schatzmeisterin / Treasurer)</span></li>
                 </ul>
-                <p><em>Erweiterter Vorstand / Extended Board:</em> Stella Karalis (Stellv. Vorsitzende / Vice-President), Ebru Algül (Schriftführerin / Secretary).</p>
+                <p data-key="impressum-sec3-extended"><em>Erweiterter Vorstand / Extended Board:</em> Stella Karalis (Stellv. Vorsitzende / Vice-President), Ebru Algül (Schriftführerin / Secretary).</p>
             </section>
 
             <!-- 4. RESPONSABLE EDITORIAL (MStV) -->
             <section class="legal-block">
-                <h2>4. Responsible for Content / Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h2>
+                <h2 data-key="impressum-sec4-title">4. Responsible for Content / Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h2>
                 <p>
                     Daniel Alejandro López<br>
                     Berlinisches Sinfonieorchester e. V.<br>
@@ -199,31 +199,31 @@
 
             <!-- 5. DESCARGO DE RESPONSABILIDAD -->
             <section class="legal-block">
-                <h2>5. Disclaimer / Haftungsausschluss</h2>
+                <h2 data-key="impressum-sec5-title">5. Disclaimer / Haftungsausschluss</h2>
                 
-                <h3>Haftung für Inhalte (Liability for Content)</h3>
-                <p>
+                <h3 data-key="impressum-sec5-content-title">Haftung für Inhalte (Liability for Content)</h3>
+                <p data-key="impressum-sec5-content-text">
                     Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
                 </p>
 
-                <h3>Haftung für Links (Liability for External Links)</h3>
-                <p>
+                <h3 data-key="impressum-sec5-links-title">Haftung für Links (Liability for External Links)</h3>
+                <p data-key="impressum-sec5-links-text">
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
                 </p>
 
-                <h3>Urheberrecht (Copyright)</h3>
-                <p>
+                <h3 data-key="impressum-sec5-copy-title">Urheberrecht (Copyright)</h3>
+                <p data-key="impressum-sec5-copy-text">
                     Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
                 </p>
             </section>
 
             <!-- 6. RESOLUCIÓN DE DISPUTAS ONLINE -->
             <section class="legal-block">
-                <h2>6. Dispute Resolution / Verbraucherstreitbeilegung</h2>
-                <p>
+                <h2 data-key="impressum-sec6-title">6. Dispute Resolution / Verbraucherstreitbeilegung</h2>
+                <p data-key="impressum-sec6-p1">
                     Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.
                 </p>
-                <p>
+                <p data-key="impressum-sec6-p2">
                     Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
             </section>
@@ -245,11 +245,27 @@
 
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/berlinischesorc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@berlinischesorchester" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/berlinischesorchester/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:info@berlinisches-sinfonieorchester.de" class="social-icon" aria-label="Send us an email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
             </div>
 
@@ -262,10 +278,10 @@
 
         <div class="footer-bottom">
             <p>
-                &copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved. 
+                <span data-key="footer-copyright">&copy; 2026 Berlinisches Sinfonieorchester e.V. All rights reserved.</span>
                 <span class="sep">|</span> 
-                Web Design by 
-                <a href="https://danielopezpiepoli.com" target="_blank" class="designer-name">Daniel López Piepoli</a>
+                <span data-key="footer-designer-credit">Web Design by</span> 
+                <a href="https://github.com/danielopezpiepoli" target="_blank" class="designer-name">Daniel López Piepoli</a>
             </p>
         </div>
     </footer>
