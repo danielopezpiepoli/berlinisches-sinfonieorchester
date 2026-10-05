@@ -42,6 +42,13 @@ const content = {
         "season-cta-desc": "Entdecken Sie alle Aufführungen dieses Jahres.",
         "btn-explore-season": "Ganze Saison Entdecken",
 
+        /* --- INDEX.HTML (SECCIÓN TEMPORAL "Coming soon"): BUILDING THE ENSEMBLE / ANNOUNCEMENT --- */
+        "ensemble-phase-tag": "Im Aufbau",
+        "ensemble-phase-title": "Der Klang von morgen entsteht",
+        "ensemble-phase-desc": "Das Berlinische Sinfonieorchester formiert derzeit sein Kernensemble, baut institutionelle Partnerschaften auf und bereitet seine erste Spielzeit vor. Termine für Probespiele, Gründungskonzerte und Fördermöglichkeiten werden in Kürze hier bekannt gegeben.",
+        "btn-auditions-inquire": "Probespiele & Kontakt",
+        "btn-support-foundation": "Die Gründung unterstützen",
+
         /* --- INDEX.HTML: MISSION / ABOUT TEASER --- */
         "mission-tag": "Seit 2026",
         "mission-title": "Unsere Mission",
@@ -723,6 +730,13 @@ const content = {
         "season-cta-title": "Complete Repertoire & Dates —",
         "season-cta-desc": "Discover every performance for this year.",
         "btn-explore-season": "Explore Full Season",
+
+        /* --- INDEX.HTML (SECCIÓN TEMPORAL "Coming soon"): BUILDING THE ENSEMBLE / ANNOUNCEMENT --- */
+        "ensemble-phase-tag": "In Formation",
+        "ensemble-phase-title": "Building the Sound of Tomorrow",
+        "ensemble-phase-desc": "The Berlinisches Sinfonieorchester is currently curating its core ensemble, establishing institutional partnerships, and preparing its debut artistic season. Audition dates, founding concerts, and membership announcements will be revealed here soon.",
+        "btn-auditions-inquire": "Auditions & Enquiries",
+        "btn-support-foundation": "Support the Foundation",
 
         /* --- INDEX.HTML: MISSION / ABOUT TEASER --- */
         "mission-tag": "Since 2026",

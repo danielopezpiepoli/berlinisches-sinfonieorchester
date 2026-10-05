@@ -37,7 +37,7 @@
                 <li><a href="index.html" data-key="home">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-trigger active-nav">
+                    <a href="#" class="dropdown-trigger">
                         <span data-key="about">About us</span>
                         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,12 +45,13 @@
                     </a>
                     <ul class="dropdown-content">
                         <li><a href="project.html" data-key="project">The project</a></li>
-                        <li><a href="musicians.html" data-key="musicians">Musicians</a></li>
-                        <li><a href="director.html" class="active-subnav" data-key="director">Music Director</a></li>
+                        <!--<li><a href="musicians.html" data-key="musicians">Musicians</a></li>-->
+                        <li><a href="director.html" data-key="director">Music Director</a></li>
                         <li><a href="board.html" data-key="board">Artistic Board</a></li>
                     </ul>
                 </li>
-
+                
+                <!-- DESCOMENTAR CUANDO SE VAYA A USAR
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">
                         <span data-key="calendar">Calendar</span>
@@ -63,7 +64,9 @@
                         <li><a href="past-concerts.html" data-key="past">Past concerts</a></li>
                     </ul>
                 </li>
+                -->
 
+                <!-- DESCOMENTAR CUANDO SE VAYA A USAR
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">
                         <span data-key="gallery">Gallery</span>
@@ -77,7 +80,9 @@
                         <li><a href="photos.html" data-key="photos">Photos</a></li>
                     </ul>
                 </li>
+                -->
 
+                <!-- DESCOMENTAR CUANDO SE VAYA A USAR
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">
                         <span data-key="support">Support us</span>
@@ -90,6 +95,9 @@
                         <li><a href="support-vision.html" data-key="membership">Support the Vision</a></li>
                     </ul>
                 </li>
+                -->
+                <!-- TEMPORAL: "Support Us" (solo mientras no se use el partners.html - Eliminar y usar el dropdown menu cuando ya se usen ambas páginas) -->
+                <li><a href="support-vision.html" data-key="support">Support us</a></li>
 
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
 
@@ -145,6 +153,7 @@
         </div>
 
         <!-- 2. SLIDER DE CONCIERTOS (SEASON 2026) -->
+        <!-- DESCOMENTAR CUANDO SE VAYA A USAR
         <div class="hero-section hero-event">
             <div class="event-wrapper">
                 <div class="season-header">
@@ -156,32 +165,40 @@
                     <button class="nav-arrow prev-arrow" style="visibility: hidden;">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 19l-7-7 7-7"/></svg>
                     </button>
+                -->
 
                     <!-- Tarjeta 1 -->
+                    <!--
                     <div class="event-card">
                         <span class="event-tag" data-key="tag-next-concert">Next Concert</span>
                         <h2 data-key="concert-1-title">Beethoven: Symphony No. 3 "Eroica"</h2>
                         <p data-key="concert-1-info">Konzerthaus Berlin | Oct 24, 2026 | 20:00</p>
                         <a href="program.html?event=1" class="btn-event" data-key="btn-get-tickets">Get Tickets</a>
                     </div>
+                    -->
 
                     <!-- Tarjeta 2 -->
+                    <!--
                     <div class="event-card" style="display: none;">
                         <span class="event-tag" data-key="tag-romantic-series">Romantic Series</span>
                         <h2 data-key="concert-2-title">Mendelssohn: "Scottish" Symphony No. 3</h2>
                         <p data-key="concert-2-info">Berliner Philharmonie | Nov 15, 2026 | 19:30</p>
                         <a href="program.html?event=2" class="btn-event" data-key="btn-get-tickets">Get Tickets</a>
                     </div>
+                    -->
 
                     <!-- Tarjeta 3 -->
+                    <!--
                     <div class="event-card" style="display: none;">
                         <span class="event-tag" data-key="tag-special-gala">Special Gala</span>
                         <h2 data-key="concert-3-title">The Sound of Cinema: Hollywood in Berlin</h2>
                         <p data-key="concert-3-info">Admiralspalast | Dec 05, 2026 | 21:00</p>
                         <a href="program.html?event=3" class="btn-event" data-key="btn-get-tickets">Get Tickets</a>
                     </div>
+                    -->
 
                     <!-- Tarjeta 4 (CTA Final) -->
+                    <!--
                     <div class="event-card event-card-cta" style="display: none;">
                         <span class="event-tag" data-key="tag-season-cta">Season 2026</span>
                         <h2 data-key="season-cta-title">Complete Repertoire & Dates —</h2>
@@ -202,6 +219,131 @@
                 </div>
             </div>
         </div>
+        -->
+
+        <!-- SECCIÓN TEMPORAL "Coming soon": PARA MOSTRAR LA PÁGINA WEB (antes de tener calendario y demás secciones) -->
+        <!-- =========================================
+            BUILDING THE ENSEMBLE / ANNOUNCEMENT
+            ========================================= -->
+        <style>
+            /* Estilos contenidos exclusivamente para este bloque temporal */
+            .ensemble-announcement-section {
+                background-color: #fdfbf7; /* Tono marfil institucional idéntico a las secciones editoriales */
+                padding: 4rem 1.5rem;
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .ensemble-announcement-card {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            .ensemble-announcement-section .section-tag {
+                font-family: 'Playfair Display', serif;
+                font-style: italic;
+                font-size: 1.1rem;
+                color: var(--gold);
+                letter-spacing: 2px;
+                text-transform: none;
+                font-weight: 400;
+                margin-bottom: 0.3rem;
+                display: inline-block;
+            }
+            .ensemble-announcement-title {
+                font-family: 'Playfair Display', serif;
+                font-size: clamp(1.8rem, 3vw, 2.2rem);
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                color: var(--black);
+                line-height: 1.2;
+                margin: 0.4rem 0 0.8rem;
+                font-weight: 400;
+                opacity: 0.9;
+            }
+            .ensemble-announcement-section .short-line {
+                width: 45px;
+                height: 2px;
+                background: var(--gold);
+                margin: 1.2rem auto 1.5rem;
+            }
+            .ensemble-announcement-text {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                line-height: 1.75;
+                color: #555555;
+                font-weight: 300;
+                margin: 0 auto 2.2rem;
+                max-width: 580px;
+            }
+            .ensemble-announcement-cta {
+                display: flex;
+                gap: 1.2rem;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            /* Estructura común de los botones basada en tus clases base */
+            .btn-announcement {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 44px;
+                min-width: 210px;
+                padding: 0 1.5rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                box-sizing: border-box;
+                border-radius: 0;
+                transition: all 0.3s ease;
+            }
+            /* Botón 1: negro que pasa a dorado con elevación y resplandor (igual que .btn-event) */
+            .btn-announcement-gold {
+                background-color: var(--black);
+                color: var(--white);
+                border: 1px solid var(--black);
+            }
+            .btn-announcement-gold:hover {
+                background-color: var(--gold);
+                border-color: var(--gold);
+                color: var(--white);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25);
+            }
+            /* Botón 2: contorno negro que invierte a fondo negro (igual que .btn-ticket-ghost) */
+            .btn-announcement-outline {
+                background-color: transparent;
+                color: var(--black);
+                border: 1px solid var(--black);
+            }
+            .btn-announcement-outline:hover {
+                background-color: var(--black);
+                color: var(--white);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
+        <div class="ensemble-announcement-section">
+            <div class="ensemble-announcement-card">
+                <span class="section-tag" data-key="ensemble-phase-tag">In Formation</span>
+                <h2 class="ensemble-announcement-title" data-key="ensemble-phase-title">Building the Sound of Tomorrow</h2>
+                <div class="short-line"></div>
+                
+                <p class="ensemble-announcement-text" data-key="ensemble-phase-desc">
+                    The Berlinisches Sinfonieorchester is currently curating its core ensemble, establishing institutional partnerships, and preparing its debut artistic season. Audition dates, founding concerts, and membership announcements will be revealed here soon.
+                </p>
+
+                <div class="ensemble-announcement-cta">
+                    <a href="contact.html?topic=join" class="btn-announcement btn-announcement-gold" data-key="btn-auditions-inquire">Auditions & Enquiries</a>
+                    <a href="support-vision.html" class="btn-announcement btn-announcement-outline" data-key="btn-support-foundation">Support the Foundation</a>
+                </div>
+            </div>
+        </div>
+        <!-- FIN DE LA SECCIÓN TEMPORAL: Borrar después del primer concierto -->
 
         <!-- 3. ABOUT / MISSION SECTION -->
         <div class="hero-section hero-about" id="project-teaser">
@@ -231,6 +373,7 @@
         </div>
 
         <!-- 4. HIGHLIGHTS & ARCHIVE -->
+        <!-- DESCOMENTAR CUANDO SE VAYA A USAR
         <div class="hero-section hero-highlights">
             <div class="highlights-container">
                 <div class="season-header">
@@ -272,12 +415,14 @@
                 </div>
             </div>
         </div>
+        -->
 
     </section>
 
     <!-- =========================================
          PARTNERS (PRE-FOOTER)
          ========================================= -->
+    <!-- DESCOMENTAR CUANDO SE VAYA A USAR
     <section class="partners-strip">
         <div class="partners-container">
             <h2 data-key="supported-by">In partnership with</h2>
@@ -295,6 +440,7 @@
             </a>
         </div>
     </section>
+    -->
 
     <!-- =========================================
          FOOTER & SUB-FOOTER
