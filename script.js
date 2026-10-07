@@ -21,7 +21,7 @@ const content = {
         partners: "Partnerschaften",
         membership: "Vision Fördern",
         contact: "Kontakt",
-        hero: "Der neue Klang Berlins.",
+        hero: "Berlinisches Sinfonieorchester",
 
         /* --- INDEX.HTML: HERO & SEASON SLIDER --- */
         "hero-subtitle": "Der neue Klang Berlins",
@@ -703,7 +703,7 @@ const content = {
         partners: "Partnerships",
         membership: "Support the Vision",
         contact: "Contact",
-        hero: "The New Sound of Berlin.",
+        hero: "Berlinisches Sinfonieorchester",
 
         /* --- INDEX.HTML: HERO & SEASON SLIDER --- */
         "hero-subtitle": "The New Sound of Berlin",
@@ -1468,7 +1468,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const heroSub = document.querySelector('.hero-content p');
         if (heroSub) {
-            heroSub.textContent = selectedLang === 'de' ? "Berlins Neuer Sound" : "The New Sound of Berlin";
+            heroSub.textContent = selectedLang === 'de' ? "Der neue Klang Berlins" : "The New Sound of Berlin";
         }
 
         // 3. Actualiza texto y bandera en el selector del header

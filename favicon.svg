@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo marfil institucional con esquinas ligeramente redondeadas -->
+  <rect width="512" height="512" rx="96" fill="#fdfbf7"/>
+  
+  <!-- "B" institucional agrandada para máxima legibilidad en 16x16px -->
+  <text x="256" y="325" 
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif" 
+        font-size="330" 
+        font-weight="900" 
+        fill="#1a1a1a" 
+        text-anchor="middle">B</text>
+        
+  <!-- Barra de acento dorada: se ensancha y se hace más gruesa, con un tono ligeramente más oscuro (#b58d42) para contrastar mejor -->
+  <rect x="136" y="375" width="240" height="36" fill="#b58d42" rx="10"/>
+</svg>
