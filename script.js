@@ -1482,7 +1482,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const heroSub = document.querySelector('.hero-content p');
         if (heroSub) {
-            heroSub.textContent = selectedLang === 'de' ? "Berlins Neuer Sound" : "The New Sound of Berlin";
+            heroSub.textContent = selectedLang === 'de' ? "Der neue Klang Berlins" : "The New Sound of Berlin";
         }
 
         // 3. Actualiza texto y bandera en el selector del header
