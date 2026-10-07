@@ -21,7 +21,7 @@ const content = {
         partners: "Partnerschaften",
         membership: "Vision Fördern",
         contact: "Kontakt",
-        hero: "Der neue Klang Berlins.",
+        hero: "Berlinisches Sinfonieorchester",
 
         /* --- INDEX.HTML: HERO & SEASON SLIDER --- */
         "hero-subtitle": "Der neue Klang Berlins",
@@ -710,7 +710,7 @@ const content = {
         partners: "Partnerships",
         membership: "Support the Vision",
         contact: "Contact",
-        hero: "The New Sound of Berlin.",
+        hero: "Berlinisches Sinfonieorchester",
 
         /* --- INDEX.HTML: HERO & SEASON SLIDER --- */
         "hero-subtitle": "The New Sound of Berlin",

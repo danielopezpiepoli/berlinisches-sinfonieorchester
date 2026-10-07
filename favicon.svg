@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Fondo marfil/off-white con borde sutil para contraste en pestañas oscuras -->
-  <rect width="64" height="64" rx="12" fill="#fdfbf7" stroke="#e0dcce" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo marfil institucional con esquinas ligeramente redondeadas -->
+  <rect width="512" height="512" rx="96" fill="#fdfbf7"/>
   
-  <!-- Letra 'B' con serif en negro mate -->
-  <text x="32" y="44" 
+  <!-- "B" institucional agrandada para máxima legibilidad en 16x16px -->
+  <text x="256" y="325" 
         font-family="'Playfair Display', Georgia, 'Times New Roman', serif" 
-        font-size="42" 
-        font-weight="700" 
+        font-size="330" 
+        font-weight="900" 
         fill="#1a1a1a" 
         text-anchor="middle">B</text>
         
-  <!-- Acento/subrayado dorado -->
-  <rect x="18" y="50" width="28" height="3" fill="#c5a059" rx="1.5"/>
+  <!-- Barra de acento dorada: se ensancha y se hace más gruesa, con un tono ligeramente más oscuro (#b58d42) para contrastar mejor -->
+  <rect x="136" y="375" width="240" height="36" fill="#b58d42" rx="10"/>
 </svg>
